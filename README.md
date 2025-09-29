@@ -6,7 +6,7 @@ Politecnico di Milano · Human Computer Interaction (a.a. 2025/26)
 ## Consegne del progetto
 
 ### Consegna 0 — Tema
-- [Documento introduttivo](./deliverables/C0-tema/tema-definitivo-30%usability.pdf)
+- [Documento introduttivo](/deliverables/C0-tema/tema-definitivo-30%usability.pdf)
 
 ### Consegna 1 — Needfinding
 
@@ -25,7 +25,7 @@ Politecnico di Milano · Human Computer Interaction (a.a. 2025/26)
 ## Tema del progetto
 
 (da aggiornare dopo feedback) vedi documento introduttivo per maggiori informazioni: 
-[Documento introduttivo](./deliverables/C0-tema/tema-definitivo-30%usability.pdf)
+[Documento introduttivo](/deliverables/C0-tema/tema-definitivo-30%usability.pdf)
 
 ---
 
