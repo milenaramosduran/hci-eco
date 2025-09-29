@@ -30,11 +30,11 @@ Politecnico di Milano · Human Computer Interaction (a.a. 2025/26)
 ---
 
 ## Team
-- Nome Cognome
-- Nome Cognome
-- Nome Cognome
-- Nome Cognome 
-- Nome Cognome 
+- Nyjil John Arackal
+- Francesca Anna Capurso
+- Milena Alaxandra Ramos Duran
+- Luca Torriani
+- Samuele Segrini
 
 ---
 
