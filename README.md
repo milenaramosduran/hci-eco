@@ -9,7 +9,7 @@ Politecnico di Milano · Human Computer Interaction (a.a. 2025/26)
 - [Documento introduttivo](/deliverables/C0-tema/tema-definitivo-30%usability.pdf)
 
 ### Consegna 1 — Needfinding
-- [Documento Needfinding](/deliverables/C0-tema/consegna1-needfinding.pdf)
+- [Documento Needfinding](/deliverables/C1-needfinding/consegna1-needfinding.pdf)
 
 ### Consegna 2
 
