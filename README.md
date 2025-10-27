@@ -12,6 +12,7 @@ Politecnico di Milano · Human Computer Interaction (a.a. 2025/26)
 - [Documento Needfinding](/deliverables/C1-needfinding/consegna-1-needfinding.pdf)
 
 ### Consegna 2
+- [Documento Focus e Refinement](/deliverables/C2-focus/consegna-2-focus.pdf)
 
 ### Consegna 3
 
