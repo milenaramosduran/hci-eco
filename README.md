@@ -13,6 +13,8 @@ Politecnico di Milano · Human Computer Interaction (a.a. 2025/26)
 
 ### Consegna 2
 - [Documento Focus e Refinement](/deliverables/C2-focus/consegna-2-focus.pdf)
+- [Documento di Brainstorming](/deliverables/C2-focus/brainstorming-consegna-2.pdf)
+- [Documento Scaletta Approssimativa Interviste Focus Group](/deliverables/C2-focus/scaletta-approssimativa-focus-group.pdf)
 
 ### Consegna 3
 
@@ -48,6 +50,9 @@ hci-project/
 │   ├── C1-needfinding/
 │   │   └── consegna-1-needfinding.pdf
 │   ├── C2
+│   │   └── consegna-2-focus.pdf
+│   │   └── brainstorming-consegna-2.pdf
+│   │   └── scaletta-approssimativa-focus-group.pdf
 │   ├── C3
 │   ├── C4
 │   ├── C5
