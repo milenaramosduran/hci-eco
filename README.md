@@ -17,6 +17,7 @@ Politecnico di Milano · Human Computer Interaction (a.a. 2025/26)
 - [Documento Scaletta Approssimativa Interviste Focus Group](/deliverables/C2-focus/scaletta-approssimativa-focus-group.pdf)
 
 ### Consegna 3
+- [Documento Focus e Refinement](/deliverables/C3-prototipiLF/consegna-3-prototipiLF.pdf)
 
 ### Consegna 4
 
