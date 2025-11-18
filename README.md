@@ -58,6 +58,7 @@ hci-project/
 │   │   └── brainstorming-consegna-2.pdf
 │   │   └── scaletta-approssimativa-focus-group.pdf
 │   ├── C3
+│   │   └── consegna-3-prototipiLF.pdf
 │   ├── C4
 │   ├── C5
 │   └── C6
