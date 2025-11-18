@@ -18,6 +18,9 @@ Politecnico di Milano · Human Computer Interaction (a.a. 2025/26)
 
 ### Consegna 3
 - [Documento Focus e Refinement](/deliverables/C3-prototipiLF/consegna-3-prototipiLF.pdf)
+- [Link Prototipo I - Device Dedicato](https://www.figma.com/proto/0T1yhZNZpGx9JBQMCnQD8A?page-id=265:3275&node-id=265-3275&p=f&t=2bgKK7O36hQg9tHH-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=268:4523)
+- [Link Prototipo II - App Mobile Nativa](https://www.figma.com/proto/0T1yhZNZpGx9JBQMCnQD8A?page-id=265:3759&node-id=265-3759&p=f&t=3Vtd8J0VjYbCEJKO-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=265:3826)
+- [Link Prototipo App Smartwatch Companion ](https://www.figma.com/proto/0T1yhZNZpGx9JBQMCnQD8A/Wireframes?page-id=301:3297&node-id=301-3307&p=f&t=2bgKK7O36hQg9tHH-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=301:3307)
 
 ### Consegna 4
 
