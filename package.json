@@ -1,0 +1,26 @@
+{
+  "name": "spingo---micromobilità-sostenibile",
+  "homepage": "https://milenaramosduran.github.io/hci-eco",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "react-dom": "^19.2.1",
+    "lucide-react": "^0.556.0",
+    "react": "^19.2.1",
+    "gsap": "^3.14.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.0"
+  }
+}

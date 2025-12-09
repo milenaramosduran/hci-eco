@@ -1,0 +1,75 @@
+
+import React from 'react';
+import { ASSETS } from '../constants/images';
+
+const Personas: React.FC = () => {
+  const personas = [
+    {
+      name: "Chiara",
+      role: "La Pendolare Prudente",
+      age: "27 anni",
+      desc: "Graphic Designer. Usa una city bike. Per lei la sicurezza è prevedibilità.",
+      needs: "Anticipare i rischi, controllo.",
+      image: ASSETS.personas.chiara
+    },
+    {
+      name: "Marco",
+      role: "Il Commuter Meticoloso",
+      age: "29 anni",
+      desc: "Sviluppatore. Usa e-bike. La fiducia è razionale, basata su dati e verifiche.",
+      needs: "Parcheggi sicuri, dati affidabili.",
+      image: ASSETS.personas.marco
+    },
+    {
+      name: "David",
+      role: "Il Connettore Sociale",
+      age: "31 anni",
+      desc: "Architetto e Attivista. Vuole che il suo pedalare contribuisca alla città.",
+      needs: "Condivisione, community.",
+      image: ASSETS.personas.david
+    },
+    {
+      name: "Olivia",
+      role: "La Studentessa in Movimento",
+      age: "24 anni",
+      desc: "Studentessa PoliMi. Bici pieghevole + Metro. Vive la mobilità intermodale.",
+      needs: "Fluidità, no stress logistico.",
+      image: ASSETS.personas.olivia
+    }
+  ];
+
+  return (
+    <section className="py-24 px-6 md:px-12 bg-[#F5F5F0]">
+      <div className="mb-16">
+        <p className="text-xs font-bold uppercase tracking-widest mb-4 text-gray-400 font-display">Target Users</p>
+        <h2 className="font-display text-4xl md:text-5xl font-normal tracking-tighter">Personas & Scenari</h2>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {personas.map((p, i) => (
+            <div key={i} className="group relative overflow-hidden bg-white h-[400px] md:h-[500px] border border-gray-200 hover:shadow-xl transition-all duration-500">
+                <div className="h-2/3 overflow-hidden relative">
+                    <img src={p.image} alt={p.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
+                    <div className="absolute bottom-4 left-4 text-white">
+                        <h3 className="font-display text-3xl font-medium">{p.name}</h3>
+                        <p className="text-xs uppercase tracking-wider font-bold opacity-90">{p.role}</p>
+                    </div>
+                </div>
+                <div className="p-6 h-1/3 flex flex-col justify-between">
+                    <div>
+                        <p className="text-sm text-gray-600 font-light leading-snug mb-2">{p.desc}</p>
+                    </div>
+                    <div className="border-t border-gray-100 pt-3">
+                        <span className="text-[10px] font-bold text-emerald-600 uppercase tracking-widest">Key Need</span>
+                        <p className="text-xs font-medium text-black">{p.needs}</p>
+                    </div>
+                </div>
+            </div>
+        ))}
+      </div>
+    </section>
+  );
+};
+
+export default Personas;
