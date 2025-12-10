@@ -19,7 +19,7 @@ const GalleryGrid: React.FC = () => {
          <div className="border-r border-zinc-900 relative flex flex-col justify-center items-center p-4">
              <div className="text-center z-10 px-4 flex flex-col items-center">
                  <div className="flex items-center gap-3 mb-6">
-                    <p className="text-[10px] uppercase tracking-widest font-display font-bold text-emerald-500">Emotional Payoff</p>
+                    <p className="text-[10px] uppercase tracking-widest font-display font-bold text-emerald-500">Emotional Payoff (WORK IN PROGRESS)</p>
                     {/* Link to Consegna 2 - Value Prop (Check page number!) */}
                     <a 
                         href={`${DELIVERABLE_URL}#page=32`} 

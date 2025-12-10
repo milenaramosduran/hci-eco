@@ -35,7 +35,7 @@ const Personas: React.FC = () => {
   return (
     <section className="py-24 px-6 md:px-12 bg-[#F5F5F0]">
       <div className="mb-16">
-        <p className="text-xs font-bold uppercase tracking-widest mb-4 text-gray-400 font-display">Target Users</p>
+        <p className="text-xs font-bold uppercase tracking-widest mb-4 text-gray-400 font-display">Target Users (WORK IN PROGRESS)</p>
         <div className="flex items-center gap-4">
             <h2 className="font-display text-4xl md:text-5xl font-normal tracking-tighter">Personas & Scenari</h2>
             {/* Link to Consegna 3 - Slide 6 */}

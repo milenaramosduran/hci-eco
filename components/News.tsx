@@ -38,7 +38,7 @@ const News: React.FC = () => {
     <section className="py-24 px-6 md:px-12 bg-[#FDFDF9]">
       <div className="flex justify-between items-end mb-16">
         <div>
-            <p className="text-xs font-bold uppercase tracking-widest mb-4 text-gray-400 font-display">Needfinding</p>
+            <p className="text-xs font-bold uppercase tracking-widest mb-4 text-gray-400 font-display">Needfinding (WORK IN PROGRESS)</p>
             <div className="flex items-center gap-4">
                 <h2 className="font-display text-4xl md:text-6xl font-normal tracking-tighter">Pattern Comportamentali</h2>
                 {/* Single Link Next to Title */}
