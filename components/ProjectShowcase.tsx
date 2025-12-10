@@ -59,7 +59,7 @@ const PROJECTS: ProjectData[] = [
   },
   {
     id: "03",
-    title: "Tasks &\nPrototipi",
+    title: "Tasks &\nWireframes",
     subtitle: "Storyboard & Scelta",
     category: "C3",
     deadline: "17 Novembre",
@@ -76,7 +76,7 @@ const PROJECTS: ProjectData[] = [
   },
   {
     id: "04",
-    title: "Mid-Fi\nWireframes",
+    title: "Prototipi\nMid-Fi",
     subtitle: "Prototipazione",
     category: "C4",
     deadline: "9 Dicembre",
@@ -92,7 +92,7 @@ const PROJECTS: ProjectData[] = [
   },
   {
     id: "05",
-    title: "Heuristic\nEval",
+    title: "Valutazione\nEuristica",
     subtitle: "Valutazione",
     category: "C5",
     deadline: "22 Dicembre",
