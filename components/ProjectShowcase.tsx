@@ -39,7 +39,7 @@ const PROJECTS: ProjectData[] = [
     feedback: "Ricerca approfondita e initial mapping ben fatto. Identificazione chiara di utenti e bisogni. Migliorabile la presentazione delle domande.",
     documents: [
       { title: "Consegna 1 - Needfinding", url: "assets/deliverables/C1-needfinding/consegna-1-needfinding.pdf" },
-      { title: "Tema Definitivo", url: "assets/deliverables/C0-tema/tema-definitivo-30%usability.pdf" }
+      { title: "Tema Definitivo", url: "assets/deliverables/C0-tema/tema-definitivo-30usability.pdf" }
     ]
   },
   {
