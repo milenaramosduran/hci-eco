@@ -10,8 +10,8 @@ gsap.registerPlugin(ScrollTrigger);
 type ProjectStatus = 'completed' | 'current' | 'locked';
 
 interface ProjectDocument {
-    title: string;
-    url: string;
+  title: string;
+  url: string;
 }
 
 interface ProjectData {
@@ -38,8 +38,8 @@ const PROJECTS: ProjectData[] = [
     description: "Analisi esplorativa attraverso 109 questionari e interviste. Identificazione del 'Paradosso dell'Intenzione' e delle strategie di adattamento degli utenti urbani.",
     feedback: "Ricerca approfondita e initial mapping ben fatto. Identificazione chiara di utenti e bisogni. Migliorabile la presentazione delle domande.",
     documents: [
-        { title: "Consegna 1 - Needfinding", url: "assets/deliverables/C1-needfinding/consegna-1-needfinding.pdf" },
-        { title: "Tema Definitivo", url: "assets/deliverables/C0-tema/tema-definitivo-30%usability.pdf" }
+      { title: "Consegna 1 - Needfinding", url: "assets/deliverables/C1-needfinding/consegna-1-needfinding.pdf" },
+      { title: "Tema Definitivo", url: "assets/deliverables/C0-tema/tema-definitivo-30%usability.pdf" }
     ]
   },
   {
@@ -52,9 +52,9 @@ const PROJECTS: ProjectData[] = [
     description: "Focus group per validare i pattern. Definizione dei 4 Bisogni Finali (Sicurezza, Fiducia, Fluidità, Comunità) e naming 'SpinGO'.",
     feedback: "Ottimo lavoro per qualità e chiarezza. Nome e Value Proposition convincenti. Suggerito l'accorpamento delle Personas.",
     documents: [
-        { title: "Consegna 2 - Focus", url: "assets/deliverables/C2-focus/consegna-2-focus.pdf" },
-        { title: "Brainstorming", url: "assets/deliverables/C2-focus/brainstorming-consegna-2.pdf" },
-        { title: "Scaletta Focus Group", url: "assets/deliverables/C2-focus/scaletta-approssimativa-focus-group.pdf" }
+      { title: "Consegna 2 - Focus", url: "assets/deliverables/C2-focus/consegna-2-focus.pdf" },
+      { title: "Brainstorming", url: "assets/deliverables/C2-focus/brainstorming-consegna-2.pdf" },
+      { title: "Scaletta Focus Group", url: "assets/deliverables/C2-focus/scaletta-approssimativa-focus-group.pdf" }
     ]
   },
   {
@@ -66,12 +66,12 @@ const PROJECTS: ProjectData[] = [
     status: 'completed',
     description: "Definizione dei 3 Task (Navigazione, Personalizzazione, Community). Confronto tra Hardware Dedicato e App Mobile. Scelta finale: App Mobile + Smartwatch Companion.",
     documents: [
-        { title: "Consegna 3 - Prototipi LF", url: "assets/deliverables/C3-prototipiLF/consegna-3-prototipiLF.pdf" }
+      { title: "Consegna 3 - Prototipi LF", url: "assets/deliverables/C3-prototipiLF/consegna-3-prototipiLF.pdf" }
     ],
     prototypes: [
-        { title: "Hardware Dedicato", url: "https://www.figma.com/proto/0T1yhZNZpGx9JBQMCnQD8A?page-id=265:3275&node-id=265-3275&p=f&t=2bgKK7O36hQg9tHH-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=268:4523" },
-        { title: "App Mobile", url: "https://www.figma.com/proto/0T1yhZNZpGx9JBQMCnQD8A?page-id=265:3759&node-id=265-3759&p=f&t=3Vtd8J0VjYbCEJKO-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=265:3826" },
-        { title: "Smartwatch Companion", url: "https://www.figma.com/proto/0T1yhZNZpGx9JBQMCnQD8A/Wireframes?page-id=301:3297&node-id=301-3307&p=f&t=2bgKK7O36hQg9tHH-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=301:3307" }
+      { title: "Hardware Dedicato", url: "https://www.figma.com/proto/0T1yhZNZpGx9JBQMCnQD8A?page-id=265:3275&node-id=265-3275&p=f&t=2bgKK7O36hQg9tHH-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=268:4523" },
+      { title: "App Mobile", url: "https://www.figma.com/proto/0T1yhZNZpGx9JBQMCnQD8A?page-id=265:3759&node-id=265-3759&p=f&t=3Vtd8J0VjYbCEJKO-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=265:3826" },
+      { title: "Smartwatch Companion", url: "https://www.figma.com/proto/0T1yhZNZpGx9JBQMCnQD8A/Wireframes?page-id=301:3297&node-id=301-3307&p=f&t=2bgKK7O36hQg9tHH-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=301:3307" }
     ]
   },
   {
@@ -83,11 +83,11 @@ const PROJECTS: ProjectData[] = [
     status: 'completed',
     description: "Sviluppo dei flussi completi su Figma (Mid-Fi). Implementazione della navigazione 'Ride Safe' su Watch e gestione della Community su Smartphone.",
     documents: [
-        { title: "Scelte Progettuali", url: "assets/deliverables/C4-prototipiMF/consegna-4-scelte.pdf" },
-        { title: "Manuale Valutatori", url: "assets/deliverables/C4-prototipiMF/consegna-4-valutatori.pdf" }
+      { title: "Scelte Progettuali", url: "assets/deliverables/C4-prototipiMF/consegna-4-scelte.pdf" },
+      { title: "Manuale Valutatori", url: "assets/deliverables/C4-prototipiMF/consegna-4-valutatori.pdf" }
     ],
     prototypes: [
-        { title: "Mid-Fi (Figma)", url: "https://www.figma.com/proto/3VekieTqPhSLlhxNFiwglQ/Prototipi-App?page-id=0%3A1&node-id=253-647&p=f&viewport=928%2C1726%2C0.09&t=wFjPNdwsVfFWW5lp-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=253%3A644" }
+      { title: "Mid-Fi (Figma)", url: "https://www.figma.com/proto/3VekieTqPhSLlhxNFiwglQ/Prototipi-App?page-id=0%3A1&node-id=253-647&p=f&viewport=928%2C1726%2C0.09&t=wFjPNdwsVfFWW5lp-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=253%3A644" }
     ]
   },
   {
@@ -147,11 +147,11 @@ const ProjectShowcase: React.FC = () => {
     const ctx = gsap.context(() => {
       const track = trackRef.current;
       const panels = gsap.utils.toArray<HTMLElement>(".project-panel");
-      
+
       if (!track || panels.length === 0) return;
-      
-      const totalPanels = panels.length; 
-      
+
+      const totalPanels = panels.length;
+
       // Main Timeline for Scroll
       const tl = gsap.timeline({
         scrollTrigger: {
@@ -167,17 +167,17 @@ const ProjectShowcase: React.FC = () => {
           end: () => "+=" + (containerRef.current!.offsetWidth * (totalPanels - 1)),
           onUpdate: (self) => {
             const progress = self.progress;
-            
+
             // Direct DOM update for performance
             if (progressBarRef.current) {
-                progressBarRef.current.style.width = `${progress * 100}%`;
+              progressBarRef.current.style.width = `${progress * 100}%`;
             }
 
             // Optimize State Update
             const index = Math.round(progress * (totalPanels - 1)) + 1;
             if (index !== activeSlideRef.current) {
-                activeSlideRef.current = index;
-                setActiveSlide(index);
+              activeSlideRef.current = index;
+              setActiveSlide(index);
             }
           }
         }
@@ -192,7 +192,7 @@ const ProjectShowcase: React.FC = () => {
       // 2. Parallax Background Numbers (Move slightly Right to create depth)
       // The container moves left (-100%), so we move numbers positive x to make them appear 'slower'
       tl.to(".project-bg-number", {
-        x: window.innerWidth * 0.5, 
+        x: window.innerWidth * 0.5,
         ease: "none"
       }, 0); // Start at same time as panel move
 
@@ -203,128 +203,128 @@ const ProjectShowcase: React.FC = () => {
 
   return (
     <section ref={containerRef} className="bg-black text-white relative min-h-screen border-t border-gray-900">
-      
+
       {/* HORIZONTAL TRACK CONTAINER */}
-      <div 
-        ref={trackRef} 
+      <div
+        ref={trackRef}
         className="flex w-fit h-screen"
         style={{ width: `${PROJECTS.length * 100}vw` }}
       >
         {PROJECTS.map((project) => (
-          <div 
-            key={project.id} 
+          <div
+            key={project.id}
             className="project-panel w-screen h-screen flex-shrink-0 bg-black flex items-center justify-center relative border-r border-zinc-900 box-border overflow-hidden group"
           >
             {/* Background Number (Decorative with Parallax) */}
             <div className="project-bg-number absolute top-0 right-0 md:right-[5%] font-display text-[20rem] md:text-[30rem] leading-none text-zinc-900/30 select-none pointer-events-none opacity-20 md:opacity-30 mix-blend-screen z-0">
-                {project.id}
+              {project.id}
             </div>
 
             <div className="w-full h-full max-w-[1800px] px-6 md:px-12 grid grid-cols-1 md:grid-cols-12 md:gap-12 relative z-10 transition-all duration-700 ease-out group-hover:scale-[1.01] group-hover:shadow-[0_0_100px_rgba(16,185,129,0.1)]">
-                
-                {/* Main Content - Centered */}
-                <div className="md:col-span-10 md:col-start-2 flex flex-col justify-center h-full pt-20 md:pt-0">
-                     <div className="mb-6 md:mb-10 flex items-center gap-4 border-b border-zinc-900 pb-6 w-fit">
-                         <span className="font-mono text-emerald-500 text-sm">CONSEGNA {project.id}</span>
-                         <StatusBadge status={project.status} />
-                     </div>
 
-                     {/* Title - Bigger and bolder */}
-                     <h2 className="font-display text-[14vw] md:text-[9vw] leading-[0.8] tracking-tighter text-white uppercase mb-12 whitespace-pre-line">
-                        {project.title}
-                     </h2>
-
-                     {/* Info Grid */}
-                     <div className="grid grid-cols-1 md:grid-cols-3 gap-12 border-t border-zinc-800 pt-8">
-                         <div className="md:col-span-2 space-y-6">
-                             <p className="text-zinc-400 text-lg md:text-xl leading-relaxed font-light max-w-2xl">
-                                {project.description}
-                             </p>
-                             
-                             {/* FEEDBACK SECTION */}
-                             {project.feedback && (
-                                <div className="mt-8">
-                                     <div className="flex items-start gap-4">
-                                        <MessageSquareQuote className="w-5 h-5 text-emerald-600 shrink-0 mt-1 opacity-80" />
-                                        <div>
-                                            <p className="text-[10px] uppercase tracking-widest text-emerald-600 font-bold mb-2 opacity-80">Feedback Docenti</p>
-                                            <p className="text-zinc-500 text-sm italic leading-relaxed">"{project.feedback}"</p>
-                                        </div>
-                                     </div>
-                                </div>
-                             )}
-
-                             <div className="flex flex-wrap gap-8">
-                                {/* DOCUMENTS SECTION */}
-                                {project.documents && project.documents.length > 0 && (
-                                    <div className="mt-8">
-                                        <p className="text-[10px] uppercase tracking-widest text-zinc-500 font-bold mb-3">Documentazione</p>
-                                        <div className="flex flex-wrap gap-3">
-                                            {project.documents.map((doc, i) => (
-                                                <a 
-                                                    key={i} 
-                                                    href={doc.url} 
-                                                    target="_blank" 
-                                                    rel="noopener noreferrer"
-                                                    className="flex items-center gap-2 px-4 py-2 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 hover:border-emerald-900 rounded-lg transition-all duration-300 group/doc"
-                                                >
-                                                    <FileText className="w-4 h-4 text-emerald-600" />
-                                                    <span className="text-xs font-mono text-zinc-300 group-hover/doc:text-white">{doc.title}</span>
-                                                    <Download className="w-3 h-3 text-zinc-600 group-hover/doc:text-emerald-500 ml-2" />
-                                                </a>
-                                            ))}
-                                        </div>
-                                    </div>
-                                )}
-
-                                {/* PROTOTYPES SECTION */}
-                                {project.prototypes && project.prototypes.length > 0 && (
-                                    <div className="mt-8">
-                                        <p className="text-[10px] uppercase tracking-widest text-emerald-600 font-bold mb-3 flex items-center gap-2">
-                                            <Play className="w-3 h-3 fill-current" /> Prototipi Interattivi
-                                        </p>
-                                        <div className="flex flex-wrap gap-3">
-                                            {project.prototypes.map((proto, i) => (
-                                                <a 
-                                                    key={i} 
-                                                    href={proto.url} 
-                                                    target="_blank" 
-                                                    rel="noopener noreferrer"
-                                                    className="flex items-center gap-2 px-4 py-2 bg-emerald-950/30 hover:bg-emerald-900/50 border border-emerald-900 hover:border-emerald-500 rounded-lg transition-all duration-300 group/proto"
-                                                >
-                                                    <ExternalLink className="w-4 h-4 text-emerald-500" />
-                                                    <span className="text-xs font-mono text-emerald-100 group-hover/proto:text-white">{proto.title}</span>
-                                                </a>
-                                            ))}
-                                        </div>
-                                    </div>
-                                )}
-                             </div>
-                         </div>
-                         
-                         <div className="space-y-8">
-                             <div className="flex flex-col">
-                                <div className="flex items-center gap-2 text-[10px] uppercase tracking-widest text-zinc-600 font-bold mb-2">
-                                    <Target className="w-4 h-4" /> Focus
-                                </div>
-                                <span className="text-white font-display text-2xl">{project.subtitle}</span>
-                             </div>
-                             
-                             <div className="flex flex-col gap-6">
-                                 <div className="flex flex-col">
-                                    <span className="text-[10px] uppercase tracking-widest text-zinc-600 font-bold mb-1">Fase</span>
-                                    <span className="text-zinc-400 font-mono text-base">{project.category}</span>
-                                 </div>
-                                 <div className="flex flex-col">
-                                    <div className="flex items-center gap-2 text-[10px] uppercase tracking-widest text-zinc-600 font-bold mb-1">
-                                        <Calendar className="w-4 h-4" /> Deadline
-                                    </div>
-                                    <span className="text-zinc-400 font-mono text-base">{project.deadline}</span>
-                                 </div>
-                             </div>
-                         </div>
-                     </div>
+              {/* Main Content - Centered */}
+              <div className="md:col-span-10 md:col-start-2 flex flex-col justify-center h-full pt-20 md:pt-0">
+                <div className="mb-6 md:mb-10 flex items-center gap-4 border-b border-zinc-900 pb-6 w-fit">
+                  <span className="font-mono text-emerald-500 text-sm">CONSEGNA {project.id}</span>
+                  <StatusBadge status={project.status} />
                 </div>
+
+                {/* Title - Bigger and bolder */}
+                <h2 className="font-display text-[14vw] md:text-[9vw] leading-[0.8] tracking-tighter text-white uppercase mb-12 whitespace-pre-line">
+                  {project.title}
+                </h2>
+
+                {/* Info Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-12 border-t border-zinc-800 pt-8">
+                  <div className="md:col-span-2 space-y-6">
+                    <p className="text-zinc-400 text-lg md:text-xl leading-relaxed font-light max-w-2xl">
+                      {project.description}
+                    </p>
+
+                    {/* FEEDBACK SECTION */}
+                    {project.feedback && (
+                      <div className="mt-8">
+                        <div className="flex items-start gap-4">
+                          <MessageSquareQuote className="w-5 h-5 text-emerald-600 shrink-0 mt-1 opacity-80" />
+                          <div>
+                            <p className="text-[10px] uppercase tracking-widest text-emerald-600 font-bold mb-2 opacity-80">Feedback Docenti</p>
+                            <p className="text-zinc-500 text-sm italic leading-relaxed">"{project.feedback}"</p>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+
+                    <div className="flex flex-wrap gap-8">
+                      {/* DOCUMENTS SECTION */}
+                      {project.documents && project.documents.length > 0 && (
+                        <div className="mt-8">
+                          <p className="text-[10px] uppercase tracking-widest text-zinc-500 font-bold mb-3">Documentazione</p>
+                          <div className="flex flex-wrap gap-3">
+                            {project.documents.map((doc, i) => (
+                              <a
+                                key={i}
+                                href={doc.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-2 px-4 py-2 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 hover:border-emerald-900 rounded-lg transition-all duration-300 group/doc"
+                              >
+                                <FileText className="w-4 h-4 text-emerald-600" />
+                                <span className="text-xs font-mono text-zinc-300 group-hover/doc:text-white">{doc.title}</span>
+                                <Download className="w-3 h-3 text-zinc-600 group-hover/doc:text-emerald-500 ml-2" />
+                              </a>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+
+                      {/* PROTOTYPES SECTION */}
+                      {project.prototypes && project.prototypes.length > 0 && (
+                        <div className="mt-8">
+                          <p className="text-[10px] uppercase tracking-widest text-emerald-600 font-bold mb-3 flex items-center gap-2">
+                            <Play className="w-3 h-3 fill-current" /> Prototipi Interattivi
+                          </p>
+                          <div className="flex flex-wrap gap-3">
+                            {project.prototypes.map((proto, i) => (
+                              <a
+                                key={i}
+                                href={proto.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-2 px-4 py-2 bg-emerald-950/30 hover:bg-emerald-900/50 border border-emerald-900 hover:border-emerald-500 rounded-lg transition-all duration-300 group/proto"
+                              >
+                                <ExternalLink className="w-4 h-4 text-emerald-500" />
+                                <span className="text-xs font-mono text-emerald-100 group-hover/proto:text-white">{proto.title}</span>
+                              </a>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+
+                  <div className="space-y-8">
+                    <div className="flex flex-col">
+                      <div className="flex items-center gap-2 text-[10px] uppercase tracking-widest text-zinc-600 font-bold mb-2">
+                        <Target className="w-4 h-4" /> Focus
+                      </div>
+                      <span className="text-white font-display text-2xl">{project.subtitle}</span>
+                    </div>
+
+                    <div className="flex flex-col gap-6">
+                      <div className="flex flex-col">
+                        <span className="text-[10px] uppercase tracking-widest text-zinc-600 font-bold mb-1">Fase</span>
+                        <span className="text-zinc-400 font-mono text-base">{project.category}</span>
+                      </div>
+                      <div className="flex flex-col">
+                        <div className="flex items-center gap-2 text-[10px] uppercase tracking-widest text-zinc-600 font-bold mb-1">
+                          <Calendar className="w-4 h-4" /> Deadline
+                        </div>
+                        <span className="text-zinc-400 font-mono text-base">{project.deadline}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
             </div>
           </div>
@@ -335,22 +335,22 @@ const ProjectShowcase: React.FC = () => {
       {/* FIXED FOOTER BAR */}
       <div className="absolute bottom-0 left-0 w-full z-50 bg-black border-t border-zinc-900">
         <div className="w-full h-[2px] bg-zinc-900 relative">
-             <div 
-                ref={progressBarRef} 
-                className="absolute top-0 left-0 h-full bg-emerald-500 w-0" 
-             />
+          <div
+            ref={progressBarRef}
+            className="absolute top-0 left-0 h-full bg-emerald-500 w-0"
+          />
         </div>
 
         <div className="px-6 md:px-12 py-6 flex justify-between items-center">
-            <div className="font-mono text-xs tracking-widest text-zinc-500 flex gap-4">
-               <span className="text-white">{activeSlide < 10 ? `0${activeSlide}` : activeSlide}</span>
-               <span className="opacity-30">/</span> 
-               <span>{PROJECTS.length < 10 ? `0${PROJECTS.length}` : PROJECTS.length}</span>
-            </div>
-            
-            <span className="hidden md:inline font-display text-xs uppercase tracking-widest text-zinc-500">
-               Roadmap di Progetto
-            </span>
+          <div className="font-mono text-xs tracking-widest text-zinc-500 flex gap-4">
+            <span className="text-white">{activeSlide < 10 ? `0${activeSlide}` : activeSlide}</span>
+            <span className="opacity-30">/</span>
+            <span>{PROJECTS.length < 10 ? `0${PROJECTS.length}` : PROJECTS.length}</span>
+          </div>
+
+          <span className="hidden md:inline font-display text-xs uppercase tracking-widest text-zinc-500">
+            Roadmap di Progetto
+          </span>
         </div>
       </div>
 
