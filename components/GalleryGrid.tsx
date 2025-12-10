@@ -1,8 +1,10 @@
-
 import React from 'react';
+import { ArrowUpRight } from 'lucide-react';
 import { ASSETS } from '../constants/images';
 
 const GalleryGrid: React.FC = () => {
+  const DELIVERABLE_URL = "assets/deliverables/C2-focus/consegna-2-focus.pdf";
+
   return (
     <section className="bg-black text-white min-h-screen relative flex flex-col border-t border-zinc-900">
        <div className="flex-1 w-full grid grid-cols-1 md:grid-cols-4 h-[80vh]">
@@ -15,8 +17,20 @@ const GalleryGrid: React.FC = () => {
          
          {/* Column 2 */}
          <div className="border-r border-zinc-900 relative flex flex-col justify-center items-center p-4">
-             <div className="text-center z-10 px-4">
-                 <p className="text-[10px] uppercase tracking-widest mb-6 font-display font-bold text-emerald-500">Emotional Payoff</p>
+             <div className="text-center z-10 px-4 flex flex-col items-center">
+                 <div className="flex items-center gap-3 mb-6">
+                    <p className="text-[10px] uppercase tracking-widest font-display font-bold text-emerald-500">Emotional Payoff</p>
+                    {/* Link to Consegna 2 - Value Prop (Check page number!) */}
+                    <a 
+                        href={`${DELIVERABLE_URL}#page=1`} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="group p-1.5 rounded-full border border-zinc-700 hover:border-emerald-500 hover:bg-emerald-500 transition-all duration-300"
+                        title="Vedi Value Proposition in Consegna 2"
+                    >
+                        <ArrowUpRight className="w-3 h-3 text-zinc-500 group-hover:text-black transition-colors" />
+                    </a>
+                 </div>
                  <h2 className="font-display text-5xl md:text-6xl font-normal leading-[1] tracking-tighter">
                     La libertà<br/>
                     di muoverti<br/>

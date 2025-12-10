@@ -1,5 +1,5 @@
-
 import React from 'react';
+import { ArrowUpRight } from 'lucide-react';
 import { ASSETS } from '../constants/images';
 
 const Personas: React.FC = () => {
@@ -30,11 +30,25 @@ const Personas: React.FC = () => {
     }
   ];
 
+  const DELIVERABLE_URL = "assets/deliverables/C3-prototipiLF/consegna-3-prototipiLF.pdf";
+
   return (
     <section className="py-24 px-6 md:px-12 bg-[#F5F5F0]">
       <div className="mb-16">
         <p className="text-xs font-bold uppercase tracking-widest mb-4 text-gray-400 font-display">Target Users</p>
-        <h2 className="font-display text-4xl md:text-5xl font-normal tracking-tighter">Personas & Scenari</h2>
+        <div className="flex items-center gap-4">
+            <h2 className="font-display text-4xl md:text-5xl font-normal tracking-tighter">Personas & Scenari</h2>
+            {/* Link to Consegna 3 - Slide 6 */}
+            <a 
+                href={`${DELIVERABLE_URL}#page=6`}
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="group p-2 rounded-full border border-gray-300 hover:border-emerald-600 hover:bg-emerald-600 transition-all duration-300"
+                title="Vedi Scenari in Consegna 3"
+            >
+                <ArrowUpRight className="w-6 h-6 text-gray-400 group-hover:text-white transition-colors" />
+            </a>
+        </div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
