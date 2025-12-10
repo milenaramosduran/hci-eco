@@ -22,7 +22,7 @@ const GalleryGrid: React.FC = () => {
                     <p className="text-[10px] uppercase tracking-widest font-display font-bold text-emerald-500">Emotional Payoff</p>
                     {/* Link to Consegna 2 - Value Prop (Check page number!) */}
                     <a 
-                        href={`${DELIVERABLE_URL}#page=1`} 
+                        href={`${DELIVERABLE_URL}#page=32`} 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="group p-1.5 rounded-full border border-zinc-700 hover:border-emerald-500 hover:bg-emerald-500 transition-all duration-300"
