@@ -80,14 +80,14 @@ const Introduction: React.FC = () => {
                 <div className="flex items-baseline gap-1 text-4xl md:text-5xl font-medium font-display text-black">
                   4
                 </div>
-                <p className="text-[10px] md:text-xs uppercase tracking-wider text-gray-500 font-bold">Personas</p>
+                <p className="text-[10px] md:text-xs uppercase tracking-wider text-gray-500 font-bold">Bisogni</p>
               </div>
 
               <div className="stat-item flex flex-col gap-1">
                 <div className="flex items-baseline gap-1 text-4xl md:text-5xl font-medium font-display text-black">
                   3
                 </div>
-                <p className="text-[10px] md:text-xs uppercase tracking-wider text-gray-500 font-bold">Consegne</p>
+                <p className="text-[10px] md:text-xs uppercase tracking-wider text-gray-500 font-bold">Scenari Chiave</p>
               </div>
             </div>
         </div>

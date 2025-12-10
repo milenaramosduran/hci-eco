@@ -1,6 +1,6 @@
 
 import React, { useLayoutEffect, useRef, useState } from 'react';
-import { CheckCircle2, Lock, Loader2, MessageSquareQuote, Target, Calendar } from 'lucide-react';
+import { CheckCircle2, Lock, Loader2, MessageSquareQuote, Target, Calendar, FileText, Download, ExternalLink, Play } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -8,6 +8,11 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 type ProjectStatus = 'completed' | 'current' | 'locked';
+
+interface ProjectDocument {
+    title: string;
+    url: string;
+}
 
 interface ProjectData {
   id: string;
@@ -18,6 +23,8 @@ interface ProjectData {
   status: ProjectStatus;
   feedback?: string;
   deadline: string;
+  documents?: ProjectDocument[];
+  prototypes?: ProjectDocument[];
 }
 
 const PROJECTS: ProjectData[] = [
@@ -29,26 +36,43 @@ const PROJECTS: ProjectData[] = [
     deadline: "13 Ottobre",
     status: 'completed',
     description: "Analisi esplorativa attraverso 109 questionari e interviste. Identificazione del 'Paradosso dell'Intenzione' e delle strategie di adattamento degli utenti urbani.",
-    feedback: "Ricerca approfondita e initial mapping ben fatto. Identificazione chiara di utenti e bisogni. Migliorabile la presentazione delle domande."
+    feedback: "Ricerca approfondita e initial mapping ben fatto. Identificazione chiara di utenti e bisogni. Migliorabile la presentazione delle domande.",
+    documents: [
+        { title: "Consegna 1 - Needfinding", url: "assets/deliverables/C1-needfinding/consegna-1-needfinding.pdf" },
+        { title: "Tema Definitivo", url: "assets/deliverables/C0-tema/tema-definitivo-30%usability.pdf" }
+    ]
   },
   {
     id: "02",
-    title: "Focus &\nRefine",
+    title: "Focus &\nRefinement",
     subtitle: "Raffinamento",
     category: "C2",
     deadline: "27 Ottobre",
     status: 'completed',
     description: "Focus group per validare i pattern. Definizione dei 4 Bisogni Finali (Sicurezza, Fiducia, Fluidità, Comunità) e naming 'SpinGO'.",
-    feedback: "Ottimo lavoro per qualità e chiarezza. Nome e Value Proposition convincenti. Suggerito l'accorpamento delle Personas."
+    feedback: "Ottimo lavoro per qualità e chiarezza. Nome e Value Proposition convincenti. Suggerito l'accorpamento delle Personas.",
+    documents: [
+        { title: "Consegna 2 - Focus", url: "assets/deliverables/C2-focus/consegna-2-focus.pdf" },
+        { title: "Brainstorming", url: "assets/deliverables/C2-focus/brainstorming-consegna-2.pdf" },
+        { title: "Scaletta Focus Group", url: "assets/deliverables/C2-focus/scaletta-approssimativa-focus-group.pdf" }
+    ]
   },
   {
     id: "03",
-    title: "Tasks &\nProto",
+    title: "Tasks &\nPrototipi",
     subtitle: "Storyboard & Scelta",
     category: "C3",
     deadline: "17 Novembre",
     status: 'completed',
-    description: "Definizione dei 3 Task (Navigazione, Personalizzazione, Community). Confronto tra Hardware Dedicato e App Mobile. Scelta finale: App Mobile + Smartwatch Companion."
+    description: "Definizione dei 3 Task (Navigazione, Personalizzazione, Community). Confronto tra Hardware Dedicato e App Mobile. Scelta finale: App Mobile + Smartwatch Companion.",
+    documents: [
+        { title: "Consegna 3 - Prototipi LF", url: "assets/deliverables/C3-prototipiLF/consegna-3-prototipiLF.pdf" }
+    ],
+    prototypes: [
+        { title: "Hardware Dedicato", url: "https://www.figma.com/proto/0T1yhZNZpGx9JBQMCnQD8A?page-id=265:3275&node-id=265-3275&p=f&t=2bgKK7O36hQg9tHH-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=268:4523" },
+        { title: "App Mobile", url: "https://www.figma.com/proto/0T1yhZNZpGx9JBQMCnQD8A?page-id=265:3759&node-id=265-3759&p=f&t=3Vtd8J0VjYbCEJKO-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=265:3826" },
+        { title: "Smartwatch Companion", url: "https://www.figma.com/proto/0T1yhZNZpGx9JBQMCnQD8A/Wireframes?page-id=301:3297&node-id=301-3307&p=f&t=2bgKK7O36hQg9tHH-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=301:3307" }
+    ]
   },
   {
     id: "04",
@@ -57,7 +81,14 @@ const PROJECTS: ProjectData[] = [
     category: "C4",
     deadline: "9 Dicembre",
     status: 'completed',
-    description: "Sviluppo dei flussi completi su Figma (Mid-Fi). Implementazione della navigazione 'Ride Safe' su Watch e gestione della Community su Smartphone."
+    description: "Sviluppo dei flussi completi su Figma (Mid-Fi). Implementazione della navigazione 'Ride Safe' su Watch e gestione della Community su Smartphone.",
+    documents: [
+        { title: "Scelte Progettuali", url: "assets/deliverables/C4-prototipiMF/consegna-4-scelte.pdf" },
+        { title: "Manuale Valutatori", url: "assets/deliverables/C4-prototipiMF/consegna-4-valutatori.pdf" }
+    ],
+    prototypes: [
+        { title: "Mid-Fi (Figma)", url: "https://www.figma.com/proto/3VekieTqPhSLlhxNFiwglQ/Prototipi-App?page-id=0%3A1&node-id=253-647&p=f&viewport=928%2C1726%2C0.09&t=wFjPNdwsVfFWW5lp-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=253%3A644" }
+    ]
   },
   {
     id: "05",
@@ -210,6 +241,7 @@ const ProjectShowcase: React.FC = () => {
                                 {project.description}
                              </p>
                              
+                             {/* FEEDBACK SECTION */}
                              {project.feedback && (
                                 <div className="mt-8">
                                      <div className="flex items-start gap-4">
@@ -221,6 +253,53 @@ const ProjectShowcase: React.FC = () => {
                                      </div>
                                 </div>
                              )}
+
+                             <div className="flex flex-wrap gap-8">
+                                {/* DOCUMENTS SECTION */}
+                                {project.documents && project.documents.length > 0 && (
+                                    <div className="mt-8">
+                                        <p className="text-[10px] uppercase tracking-widest text-zinc-500 font-bold mb-3">Documentazione</p>
+                                        <div className="flex flex-wrap gap-3">
+                                            {project.documents.map((doc, i) => (
+                                                <a 
+                                                    key={i} 
+                                                    href={doc.url} 
+                                                    target="_blank" 
+                                                    rel="noopener noreferrer"
+                                                    className="flex items-center gap-2 px-4 py-2 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 hover:border-emerald-900 rounded-lg transition-all duration-300 group/doc"
+                                                >
+                                                    <FileText className="w-4 h-4 text-emerald-600" />
+                                                    <span className="text-xs font-mono text-zinc-300 group-hover/doc:text-white">{doc.title}</span>
+                                                    <Download className="w-3 h-3 text-zinc-600 group-hover/doc:text-emerald-500 ml-2" />
+                                                </a>
+                                            ))}
+                                        </div>
+                                    </div>
+                                )}
+
+                                {/* PROTOTYPES SECTION */}
+                                {project.prototypes && project.prototypes.length > 0 && (
+                                    <div className="mt-8">
+                                        <p className="text-[10px] uppercase tracking-widest text-emerald-600 font-bold mb-3 flex items-center gap-2">
+                                            <Play className="w-3 h-3 fill-current" /> Prototipi Interattivi
+                                        </p>
+                                        <div className="flex flex-wrap gap-3">
+                                            {project.prototypes.map((proto, i) => (
+                                                <a 
+                                                    key={i} 
+                                                    href={proto.url} 
+                                                    target="_blank" 
+                                                    rel="noopener noreferrer"
+                                                    className="flex items-center gap-2 px-4 py-2 bg-emerald-950/30 hover:bg-emerald-900/50 border border-emerald-900 hover:border-emerald-500 rounded-lg transition-all duration-300 group/proto"
+                                                >
+                                                    <ExternalLink className="w-4 h-4 text-emerald-500" />
+                                                    <span className="text-xs font-mono text-emerald-100 group-hover/proto:text-white">{proto.title}</span>
+                                                </a>
+                                            ))}
+                                        </div>
+                                    </div>
+                                )}
+                             </div>
                          </div>
                          
                          <div className="space-y-8">

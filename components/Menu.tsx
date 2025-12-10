@@ -1,15 +1,23 @@
+
 import React, { useLayoutEffect, useRef } from 'react';
 import { useMenu } from './MenuContext';
 import gsap from 'gsap';
-import { Instagram, Linkedin } from 'lucide-react';
 
 const MENU_ITEMS = [
   { label: 'Home', id: 'top' },
   { label: 'Mission', id: 'intro' },
-  { label: 'Insights', id: 'news' },
   { label: 'Consegne', id: 'projects' },
-  { label: 'Target', id: 'personas' },
+  { label: 'Pattern', id: 'news' },
+  { label: 'Personas', id: 'personas' },
   { label: 'Valori', id: 'values' },
+];
+
+const TEAM_MEMBERS = [
+  "Francesca Capurso",
+  "Nyjil John Arackal",
+  "Milena Ramos Duran",
+  "Samuele Segrini",
+  "Luca Torriani"
 ];
 
 const Menu: React.FC = () => {
@@ -188,36 +196,25 @@ const Menu: React.FC = () => {
                 {/* Decorative Line (Mobile only) */}
                 <div className="lg:hidden w-full h-[1px] bg-white/10 absolute top-0 left-0" />
 
-                {/* Block 1: Contact */}
+                {/* Block 1: Location */}
                 <div className="space-y-4">
-                    <h4 className="text-xs font-bold uppercase tracking-widest text-zinc-500 font-display">Contatti</h4>
-                    <div className="flex flex-col gap-1 text-lg font-light">
-                        <a href="mailto:hello@spingo.it" className="hover:text-white transition-colors">hello@spingo-project.com</a>
-                    </div>
-                </div>
-
-                {/* Block 2: Location */}
-                <div className="space-y-4">
-                     <h4 className="text-xs font-bold uppercase tracking-widest text-zinc-500 font-display">Sede</h4>
+                     <h4 className="text-xs font-bold uppercase tracking-widest text-zinc-500 font-display">Corso</h4>
                      <p className="text-lg font-light leading-snug max-w-xs">
-                        Politecnico di Milano<br/>
-                        Milano, Italia
+                        Human-Computer Interaction<br/>
+                        Politecnico di Milano
                      </p>
                 </div>
 
-                {/* Block 3: Socials */}
+                {/* Block 2: Team */}
                 <div className="space-y-4">
-                    <h4 className="text-xs font-bold uppercase tracking-widest text-zinc-500 font-display">Social</h4>
-                    <div className="flex gap-6">
-                        <a href="#" className="hover:text-white transition-colors flex items-center gap-2 text-sm uppercase tracking-wider group">
-                            <Instagram className="w-5 h-5" />
-                            <span className="hidden md:inline group-hover:underline decoration-1 underline-offset-4">Instagram</span>
-                        </a>
-                        <a href="#" className="hover:text-white transition-colors flex items-center gap-2 text-sm uppercase tracking-wider group">
-                            <Linkedin className="w-5 h-5" />
-                             <span className="hidden md:inline group-hover:underline decoration-1 underline-offset-4">LinkedIn</span>
-                        </a>
-                    </div>
+                    <h4 className="text-xs font-bold uppercase tracking-widest text-zinc-500 font-display">Team 30%usability</h4>
+                    <ul className="flex flex-col gap-2 text-lg font-light">
+                        {TEAM_MEMBERS.map((member, i) => (
+                            <li key={i} className="text-white/80 hover:text-white transition-colors">
+                                {member}
+                            </li>
+                        ))}
+                    </ul>
                 </div>
 
             </div>

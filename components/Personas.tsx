@@ -5,36 +5,28 @@ import { ASSETS } from '../constants/images';
 const Personas: React.FC = () => {
   const personas = [
     {
-      name: "Chiara",
-      role: "La Pendolare Prudente",
+      name: "David",
+      role: "Il Connettore Sociale",
+      age: "31 anni",
+      desc: "Architetto e Attivista Urbano (Dergano). Bici tradizionale. Vuole trasformare l'osservazione individuale in azione collettiva.",
+      needs: "Contribuire, segnalare pericoli.",
+      image: ASSETS.personas.david
+    },
+    {
+      name: "Olivia",
+      role: "La Pendolare Dinamica",
       age: "27 anni",
-      desc: "Graphic Designer. Usa una city bike. Per lei la sicurezza è prevedibilità.",
-      needs: "Anticipare i rischi, controllo.",
-      image: ASSETS.personas.chiara
+      desc: "Graphic Designer (Città Studi). Bici personale. Pianifica i tragitti ma si scontra con la realtà di cantieri e continui 'ricalcoli'.",
+      needs: "Fluidità, anticipare imprevisti.",
+      image: ASSETS.personas.olivia
     },
     {
       name: "Marco",
       role: "Il Commuter Meticoloso",
       age: "29 anni",
-      desc: "Sviluppatore. Usa e-bike. La fiducia è razionale, basata su dati e verifiche.",
-      needs: "Parcheggi sicuri, dati affidabili.",
+      desc: "Sviluppatore (Isola). Bici elettrica. L'ansia del furto e la ricerca del parcheggio guidano le sue scelte quotidiane.",
+      needs: "Dati affidabili, sicurezza sosta.",
       image: ASSETS.personas.marco
-    },
-    {
-      name: "David",
-      role: "Il Connettore Sociale",
-      age: "31 anni",
-      desc: "Architetto e Attivista. Vuole che il suo pedalare contribuisca alla città.",
-      needs: "Condivisione, community.",
-      image: ASSETS.personas.david
-    },
-    {
-      name: "Olivia",
-      role: "La Studentessa in Movimento",
-      age: "24 anni",
-      desc: "Studentessa PoliMi. Bici pieghevole + Metro. Vive la mobilità intermodale.",
-      needs: "Fluidità, no stress logistico.",
-      image: ASSETS.personas.olivia
     }
   ];
 
@@ -45,9 +37,9 @@ const Personas: React.FC = () => {
         <h2 className="font-display text-4xl md:text-5xl font-normal tracking-tighter">Personas & Scenari</h2>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {personas.map((p, i) => (
-            <div key={i} className="group relative overflow-hidden bg-white h-[400px] md:h-[500px] border border-gray-200 hover:shadow-xl transition-all duration-500">
+            <div key={i} className="group relative overflow-hidden bg-white h-[450px] md:h-[550px] border border-gray-200 hover:shadow-xl transition-all duration-500">
                 <div className="h-2/3 overflow-hidden relative">
                     <img src={p.image} alt={p.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>

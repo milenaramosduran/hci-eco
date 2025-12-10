@@ -39,17 +39,6 @@ const Testimonials: React.FC = () => {
           </div>
         </div>
       </div>
-
-      {/* Concepts Strip */}
-      <div className="mt-24 border-t border-b border-gray-200 py-6 overflow-hidden">
-        <div className="flex flex-wrap justify-between items-center gap-8 md:gap-16 opacity-40 font-display hover:opacity-100 transition-opacity duration-500">
-          <div className="font-bold text-xl md:text-3xl uppercase tracking-tighter">Sicurezza</div>
-          <div className="font-bold text-xl md:text-3xl uppercase tracking-tighter text-emerald-600">Fiducia</div>
-          <div className="font-bold text-xl md:text-3xl uppercase tracking-tighter">Fluidità</div>
-          <div className="font-bold text-xl md:text-3xl uppercase tracking-tighter text-emerald-600">Appartenenza</div>
-          <div className="font-bold text-xl md:text-3xl uppercase tracking-tighter">Autonomia</div>
-        </div>
-      </div>
     </section>
   );
 };

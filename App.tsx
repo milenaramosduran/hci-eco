@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -45,11 +46,11 @@ const AppContent: React.FC = () => {
             <div id="intro">
                 <Introduction />
             </div>
-            <div id="news">
-                <News />
-            </div>
             <div id="projects">
                 <ProjectShowcase />
+            </div>
+            <div id="news">
+                <News />
             </div>
             <div id="personas">
                 <Personas />
