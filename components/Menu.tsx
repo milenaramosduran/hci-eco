@@ -13,7 +13,7 @@ const MENU_ITEMS = [
 ];
 
 const TEAM_MEMBERS = [
-  "Francesca Capurso",
+  "Francesca Anna Capurso",
   "Nyjil John Arackal",
   "Milena Ramos Duran",
   "Samuele Segrini",
