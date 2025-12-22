@@ -26,7 +26,7 @@ Politecnico di Milano · Human Computer Interaction (a.a. 2025/26)
 - [Documento per valutatori Esterni](/public/assets/deliverables/C4-prototipiMF/consegna-4-valutatori.pdf)
 - [Documento Scelte di Progettazione](/public/assets/deliverables/C4-prototipiMF/consegna-4-scelte.pdf)
 ### Consegna 5
-
+- [Documento Valutazione Euristica](public/assets/deliverables/Valutazione_Euristica_Condivisa.pdf)
 ### Consegna 6
 
 ---
