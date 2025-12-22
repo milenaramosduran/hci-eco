@@ -96,8 +96,11 @@ const PROJECTS: ProjectData[] = [
     subtitle: "Valutazione",
     category: "C5",
     deadline: "22 Dicembre",
-    status: 'current',
-    description: "Valutazione incrociata del prototipo basata sulle 10 Euristiche di Nielsen. Report delle violazioni e severity rating."
+    status: 'completed',
+    description: "Valutazione incrociata del prototipo basata sulle 10 Euristiche di Nielsen. Report delle violazioni e severity rating.",
+    documents: [
+      { title: "Consegna 5 - Valutazione Euristica", url: "assets/deliverables/C5-valutazioneEU/consegna-5-valutazione-euristica.pdf" }
+    ]
   },
   {
     id: "06",
@@ -105,7 +108,7 @@ const PROJECTS: ProjectData[] = [
     subtitle: "Test Utente",
     category: "C6",
     deadline: "Gennaio '26",
-    status: 'locked',
+    status: 'current',
     description: "Test di usabilità con utenti reali sul prototipo High-Fidelity finale. Analisi dei risultati e rifinitura del visual design."
   }
 ];
