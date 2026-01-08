@@ -108,12 +108,12 @@ const PROJECTS: ProjectData[] = [
     subtitle: "Test Utente",
     category: "C6",
     deadline: "9 Gennaio 2026",
-    status: 'completed',
+    status: 'current',
     description: "Test di usabilità con utenti reali sul prototipo High-Fidelity finale. Analisi dei risultati e rifinitura del visual design.",
     documents: [
       { title: "Consegna 6 - Hi-Fi & Testing", url: "" },
       { title: "Modifiche al Prototipo Post V.E.", url: "" },
-      { title: "Protocollo per User Testing", url: "" }
+      { title: "Protocollo per lo User Testing", url: "" }
     ],
     prototypes: [
       { title: "Hi-Fi (Figma)", url: "https://www.figma.com/proto/3VekieTqPhSLlhxNFiwglQ/Prototipi-App?page-id=0%3A1&node-id=253-647&p=f&viewport=928%2C1726%2C0.09&t=wFjPNdwsVfFWW5lp-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=253%3A644" }
