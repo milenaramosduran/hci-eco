@@ -107,7 +107,7 @@ const PROJECTS: ProjectData[] = [
     title: "Hi-Fi &\nTesting",
     subtitle: "Test Utente",
     category: "C6",
-    deadline: "9 Gennaio 2026",
+    deadline: "9 Gennaio 2026 - Sera",
     status: 'current',
     description: "Test di usabilità con utenti reali sul prototipo High-Fidelity finale. Analisi dei risultati e rifinitura del visual design.",
     documents: [
