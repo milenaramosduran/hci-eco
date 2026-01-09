@@ -109,7 +109,7 @@ const PROJECTS: ProjectData[] = [
     status: 'current',
     description: "Test di usabilità con utenti reali sul prototipo High-Fidelity finale. Analisi dei risultati e rifinitura del visual design.",
     documents: [
-      { title: "Consegna 6 - Hi-Fi & Testing", url: "" },
+      { title: "Consegna 6 - User Testing & Analisi", url: "" },
       { title: "Modifiche al Prototipo Post V.E.", url: "assets/deliverables/C6-user_testing/consegna-6-documento-modificheVE.pdf" },
       { title: "Protocollo per User Testing ", url: "assets/deliverables/C6-user_testing/consegna-6-protocollo-usability-testing.pdf" }
     ],
