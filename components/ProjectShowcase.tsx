@@ -84,7 +84,7 @@ const PROJECTS: ProjectData[] = [
     status: 'completed',
     description: "Sviluppo dei flussi completi su Figma (Mid-Fi). Implementazione della navigazione 'Ride Safe' su Watch e gestione della Community su Smartphone. Il prototipo è stato evoluto nella versione High-Fidelity finale (Consegna 6).",
     documents: [
-      { title: "Consegna 4 -Scelte Progettuali", url: "assets/deliverables/C4-prototipiMF/consegna-4-scelte.pdf" },
+      { title: "Consegna 4 - Scelte Progettuali", url: "assets/deliverables/C4-prototipiMF/consegna-4-scelte.pdf" },
       { title: "Manuale Valutatori", url: "assets/deliverables/C4-prototipiMF/consegna-4-valutatori.pdf" }
     ]
   },
