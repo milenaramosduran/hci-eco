@@ -28,6 +28,9 @@ Politecnico di Milano · Human Computer Interaction (a.a. 2025/26)
 ### Consegna 5
 - [Documento Valutazione Euristica](public/assets/deliverables/Valutazione_Euristica_Condivisa.pdf)
 ### Consegna 6
+- [Documento Modifiche Post V.E.](/public/assets/deliverables/C6-user_testing/consegna-6-documento-modificheVE.pdf)
+- [Protocollo User Testing](/public/assets/deliverables/C6-user_testing/consegna-6-protocollo-usability-testing.pdf)
+- [Link Prototipo Hi-Fi](https://www.figma.com/proto/3VekieTqPhSLlhxNFiwglQ/Prototipi-App?page-id=0%3A1&node-id=253-647&p=f&viewport=928%2C1726%2C0.09&t=wFjPNdwsVfFWW5lp-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=253%3A644)
 
 ---
 
@@ -64,6 +67,8 @@ hci-project/public/assets/
 │   │   └── consegna-4-valutatori.pdf
 │   │   └── consegna-4-scelte.pdf
 │   ├── C5
-│   └── C6
+│   └── C6-user_testing
+│       └── consegna-6-documento-modificheVE.pdf
+│       └── consegna-6-protocollo-usability-testing.pdf
 └── README.md
 ```

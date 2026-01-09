@@ -1,6 +1,6 @@
 
 export const ASSETS = {
-  logo: "assets/images/logo-condensed.png", // Nuovo logo
+  logo: "assets/images/logo-single-condensed.png", // Nuovo logo
   hero: {
     // Percorso: public/assets/hero-urban-night.jpg
     main: "assets/images/hero-urban-night.jpg"
