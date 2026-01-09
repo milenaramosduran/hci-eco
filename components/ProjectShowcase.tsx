@@ -1,8 +1,9 @@
 
 import React, { useLayoutEffect, useRef, useState } from 'react';
-import { CheckCircle2, Lock, Loader2, MessageSquareQuote, Target, Calendar, FileText, Download, ExternalLink, Play } from 'lucide-react';
+import { CheckCircle2, Lock, Loader2, MessageSquareQuote, Target, Calendar, FileText, Download, Play, Maximize2, ArrowUpRight } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Modal from './Modal';
 
 // Register plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -147,12 +148,17 @@ const StatusBadge: React.FC<{ status: ProjectStatus }> = ({ status }) => {
   }
 };
 
+const getFigmaEmbedUrl = (url: string) => {
+  return `https://www.figma.com/embed?embed_host=share&url=${encodeURIComponent(url)}`;
+};
+
 const ProjectShowcase: React.FC = () => {
   const containerRef = useRef<HTMLElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
   const progressBarRef = useRef<HTMLDivElement>(null);
   const activeSlideRef = useRef(1); // Use Ref for logic to avoid stale closures in callbacks if needed
   const [activeSlide, setActiveSlide] = useState(1);
+  const [activePrototype, setActivePrototype] = useState<{ url: string; title: string } | null>(null);
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
@@ -294,18 +300,34 @@ const ProjectShowcase: React.FC = () => {
                           <p className="text-[10px] uppercase tracking-widest text-emerald-600 font-bold mb-3 flex items-center gap-2">
                             <Play className="w-3 h-3 fill-current" /> Prototipi Interattivi
                           </p>
-                          <div className="flex flex-wrap gap-3">
+                          <div className="flex flex-col gap-4">
                             {project.prototypes.map((proto, i) => (
-                              <a
-                                key={i}
-                                href={proto.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex items-center gap-2 px-4 py-2 bg-emerald-950/30 hover:bg-emerald-900/50 border border-emerald-900 hover:border-emerald-500 rounded-lg transition-all duration-300 group/proto"
-                              >
-                                <ExternalLink className="w-4 h-4 text-emerald-500" />
-                                <span className="text-xs font-mono text-emerald-100 group-hover/proto:text-white">{proto.title}</span>
-                              </a>
+                              <div key={i} className="flex items-center gap-4">
+                                <span className="text-sm font-mono text-emerald-100 min-w-[200px]">{proto.title}</span>
+
+                                {/* Dual Action Buttons Control Group */}
+                                <div className="flex items-center gap-3">
+                                  {/* Action 1: Preview Modal */}
+                                  <button
+                                    onClick={() => setActivePrototype({ url: proto.url, title: proto.title })}
+                                    className="group p-2 rounded-full border border-emerald-900 hover:border-emerald-500 hover:bg-emerald-500/20 transition-all duration-300"
+                                    title="Anteprima Interattiva"
+                                  >
+                                    <Maximize2 className="w-4 h-4 text-emerald-500 group-hover:text-white transition-colors" />
+                                  </button>
+
+                                  {/* Action 2: Open External */}
+                                  <a
+                                    href={proto.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="group p-2 rounded-full border border-zinc-800 hover:border-emerald-900 hover:bg-zinc-800 transition-all duration-300"
+                                    title="Apri su Figma"
+                                  >
+                                    <ArrowUpRight className="w-4 h-4 text-zinc-500 group-hover:text-emerald-400 transition-colors" />
+                                  </a>
+                                </div>
+                              </div>
                             ))}
                           </div>
                         </div>
@@ -364,6 +386,21 @@ const ProjectShowcase: React.FC = () => {
           </span>
         </div>
       </div>
+
+      {/* PROTOTYPE MODAL */}
+      <Modal
+        isOpen={!!activePrototype}
+        onClose={() => setActivePrototype(null)}
+        title={activePrototype?.title}
+      >
+        {activePrototype && (
+          <iframe
+            className="w-full h-full border-none"
+            src={getFigmaEmbedUrl(activePrototype.url)}
+            allowFullScreen
+          />
+        )}
+      </Modal>
 
     </section>
   );
