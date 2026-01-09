@@ -230,8 +230,8 @@ const Menu: React.FC = () => {
               className="group flex items-center justify-between w-full p-4 bg-zinc-900/50 hover:bg-emerald-900/20 border border-zinc-800 hover:border-emerald-500/50 rounded-lg transition-all duration-300"
             >
               <div className="flex flex-col">
-                <span className="text-lg font-bold text-white group-hover:text-emerald-400 transition-colors">Launch Hi-Fi App</span>
-                <span className="text-xs text-zinc-500 font-mono">Figma Prototype</span>
+                <span className="text-lg font-bold text-white group-hover:text-emerald-400 transition-colors">Visualizza l'App Hi-Fi</span>
+                <span className="text-xs text-zinc-500 font-mono">Prototipo Figma</span>
               </div>
               <div className="w-10 h-10 rounded-full bg-zinc-800 group-hover:bg-emerald-500/20 flex items-center justify-center transition-colors">
                 <ArrowUpRight className="w-5 h-5 text-zinc-400 group-hover:text-emerald-400 transition-colors" />
