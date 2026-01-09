@@ -14,7 +14,7 @@ export const ASSETS = {
   },
   patterns: {
     // Percorsi: public/assets/images/...
-    intention: "assets/images/pattern-intention.jpg",
+    intention: "assets/images/intention-paradox.jpg",
     adaptation: "assets/images/pattern-adaptation.jpg",
     renunciation: "assets/images/pattern-renunciation.jpg"
   },
