@@ -97,7 +97,11 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children, title }) => {
                 </div>
 
                 {/* Content */}
-                <div className="flex-1 w-full bg-zinc-950 relative">
+                <div
+                    className="flex-1 w-full bg-zinc-950 relative"
+                    onMouseEnter={() => window.dispatchEvent(new Event('cursor:hide'))}
+                    onMouseLeave={() => window.dispatchEvent(new Event('cursor:show'))}
+                >
                     {children}
                 </div>
             </div>

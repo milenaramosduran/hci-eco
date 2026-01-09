@@ -11,7 +11,7 @@ const CustomCursor: React.FC = () => {
   useEffect(() => {
     const cursor = cursorRef.current;
     const follower = followerRef.current;
-    
+
     // Only run on non-touch devices
     const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
     if (isTouchDevice || !cursor || !follower) return;
@@ -38,7 +38,7 @@ const CustomCursor: React.FC = () => {
       // Check for hover targets
       const target = e.target as HTMLElement;
       const isLink = target.closest('a, button, .cursor-hover, [role="button"]');
-      
+
       if (isLink && !isHovering) {
         setIsHovering(true);
       } else if (!isLink && isHovering) {
@@ -48,15 +48,21 @@ const CustomCursor: React.FC = () => {
 
     const onMouseLeave = () => setIsVisible(false);
     const onMouseEnter = () => setIsVisible(true);
+    const onCursorHide = () => setIsVisible(false);
+    const onCursorShow = () => setIsVisible(true);
 
     window.addEventListener('mousemove', onMouseMove);
     document.addEventListener('mouseleave', onMouseLeave);
     document.addEventListener('mouseenter', onMouseEnter);
+    window.addEventListener('cursor:hide', onCursorHide);
+    window.addEventListener('cursor:show', onCursorShow);
 
     return () => {
       window.removeEventListener('mousemove', onMouseMove);
       document.removeEventListener('mouseleave', onMouseLeave);
       document.removeEventListener('mouseenter', onMouseEnter);
+      window.removeEventListener('cursor:hide', onCursorHide);
+      window.removeEventListener('cursor:show', onCursorShow);
     };
   }, [isHovering, isVisible]);
 
@@ -90,13 +96,13 @@ const CustomCursor: React.FC = () => {
   return (
     <>
       {/* Primary Dot */}
-      <div 
+      <div
         ref={cursorRef}
         className={`fixed top-0 left-0 w-2 h-2 bg-white rounded-full pointer-events-none z-[9999] mix-blend-difference transition-opacity duration-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
       />
-      
+
       {/* Follower Ring */}
-      <div 
+      <div
         ref={followerRef}
         className={`fixed top-0 left-0 w-8 h-8 border border-white rounded-full pointer-events-none z-[9998] mix-blend-difference transition-opacity duration-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
       />
