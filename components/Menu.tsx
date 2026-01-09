@@ -237,6 +237,21 @@ const Menu: React.FC = () => {
                 <ArrowUpRight className="w-5 h-5 text-zinc-400 group-hover:text-emerald-400 transition-colors" />
               </div>
             </a>
+
+            <a
+              href="https://www.figma.com/proto/3VekieTqPhSLlhxNFiwglQ/Prototipi-App?page-id=586%3A1268&node-id=586-1640&p=f&viewport=353%2C305%2C0.15&t=TNIqnExWlRVjfggc-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=586%3A1917"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center justify-between w-full p-4 bg-zinc-900/50 hover:bg-emerald-900/20 border border-zinc-800 hover:border-emerald-500/50 rounded-lg transition-all duration-300 mt-2"
+            >
+              <div className="flex flex-col">
+                <span className="text-lg font-bold text-white group-hover:text-emerald-400 transition-colors">Visualizza Companion Watch</span>
+                <span className="text-xs text-zinc-500 font-mono">Prototipo Figma</span>
+              </div>
+              <div className="w-10 h-10 rounded-full bg-zinc-800 group-hover:bg-emerald-500/20 flex items-center justify-center transition-colors">
+                <ArrowUpRight className="w-5 h-5 text-zinc-400 group-hover:text-emerald-400 transition-colors" />
+              </div>
+            </a>
           </div>
 
         </div>

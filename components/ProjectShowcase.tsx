@@ -114,7 +114,8 @@ const PROJECTS: ProjectData[] = [
       { title: "Protocollo per User Testing ", url: "assets/deliverables/C6-user_testing/consegna-6-protocollo-usability-testing.pdf" }
     ],
     prototypes: [
-      { title: "Hi-Fi (Figma)", url: "https://www.figma.com/proto/3VekieTqPhSLlhxNFiwglQ/Prototipi-App?page-id=0%3A1&node-id=253-647&p=f&viewport=928%2C1726%2C0.09&t=wFjPNdwsVfFWW5lp-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=253%3A644" }
+      { title: "Hi-Fi App (Figma)", url: "https://www.figma.com/proto/3VekieTqPhSLlhxNFiwglQ/Prototipi-App?page-id=0%3A1&node-id=253-647&p=f&viewport=928%2C1726%2C0.09&t=wFjPNdwsVfFWW5lp-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=253%3A644" },
+      { title: "Hi-Fi Smartwatch (Figma)", url: "https://www.figma.com/proto/3VekieTqPhSLlhxNFiwglQ/Prototipi-App?page-id=586%3A1268&node-id=586-1640&p=f&viewport=353%2C305%2C0.15&t=TNIqnExWlRVjfggc-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=586%3A1917" }
     ]
   }
 ];
