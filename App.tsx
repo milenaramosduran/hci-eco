@@ -28,39 +28,39 @@ const AppContent: React.FC = () => {
     <div className="w-full min-h-screen bg-[#FDFDF9]">
       <CustomCursor />
       {!loadingComplete && <LoadingScreen onComplete={() => setLoadingComplete(true)} />}
-      
+
       <TransitionCurtain />
       <Menu />
       <Header />
-      
+
       <main id="top">
         <Hero />
-        
+
         {/* 
             Content Wrapper:
             This wrapper is crucial for the fixed hero image effect.
             It has a solid background and higher z-index (z-20) to slide OVER 
             the fixed image (z-0) from the Hero section as the user scrolls.
         */}
-        <div className="relative z-20 bg-[#FDFDF9]">
-            <div id="intro">
-                <Introduction />
-            </div>
-            <div id="projects">
-                <ProjectShowcase />
-            </div>
-            <div id="news">
-                <News />
-            </div>
-            <div id="personas">
-                <Personas />
-            </div>
-            <div id="values">
-                <Values />
-            </div>
-            <GalleryGrid />
-            <Testimonials />
-            <Footer />
+        <div className="relative z-20 bg-[#FDFDF9] overflow-x-hidden">
+          <div id="intro">
+            <Introduction />
+          </div>
+          <div id="projects">
+            <ProjectShowcase />
+          </div>
+          <div id="news">
+            <News />
+          </div>
+          <div id="personas">
+            <Personas />
+          </div>
+          <div id="values">
+            <Values />
+          </div>
+          <GalleryGrid />
+          <Testimonials />
+          <Footer />
         </div>
       </main>
     </div>
@@ -70,7 +70,7 @@ const AppContent: React.FC = () => {
 const App: React.FC = () => {
   return (
     <MenuProvider>
-        <AppContent />
+      <AppContent />
     </MenuProvider>
   );
 };
