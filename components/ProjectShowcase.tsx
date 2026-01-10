@@ -113,7 +113,7 @@ const PROJECTS: ProjectData[] = [
       {
         title: "Consegna 6 - User Testing & Analisi",
         url: "assets/deliverables/C6-user_testing/consegna-6-user-testing-report.pdf",
-        highlight: "Link Aggiornato Sab 10 Gen (Fix)"
+        highlight: "Link Aggiornato Ven 9 Gen(Fix, ricaricare pagina)"
       },
       { title: "Modifiche al Prototipo Post V.E.", url: "assets/deliverables/C6-user_testing/consegna-6-documento-modificheVE.pdf" },
       { title: "Protocollo per User Testing ", url: "assets/deliverables/C6-user_testing/consegna-6-protocollo-usability-testing.pdf" }
@@ -287,8 +287,8 @@ const ProjectShowcase: React.FC = () => {
                                   target="_blank"
                                   rel="noopener noreferrer"
                                   className={`flex items-center gap-2 px-4 py-2 bg-zinc-900 hover:bg-zinc-800 border rounded-lg transition-all duration-300 group/doc ${doc.highlight
-                                      ? 'border-amber-500/50 hover:border-amber-400 shadow-[0_0_15px_rgba(245,158,11,0.2)]'
-                                      : 'border-zinc-800 hover:border-emerald-900'
+                                    ? 'border-amber-500/50 hover:border-amber-400 shadow-[0_0_15px_rgba(245,158,11,0.2)]'
+                                    : 'border-zinc-800 hover:border-emerald-900'
                                     }`}
                                 >
                                   <FileText className={`w-4 h-4 ${doc.highlight ? 'text-amber-500' : 'text-emerald-600'}`} />
