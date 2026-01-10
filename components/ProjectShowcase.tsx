@@ -105,8 +105,8 @@ const PROJECTS: ProjectData[] = [
     title: "Hi-Fi &\nTesting",
     subtitle: "Test Utente",
     category: "C6",
-    deadline: "9 Gennaio 2026 - Sera",
-    status: 'current',
+    deadline: "9 Gennaio 2026",
+    status: 'completed',
     description: "Test di usabilità con utenti reali sul prototipo High-Fidelity finale. Analisi dei risultati e rifinitura del visual design.",
     documents: [
       { title: "Consegna 6 - User Testing & Analisi", url: "assets/deliverables/C6-user_testing/consegna-6-user-testing-report.pdf" },
