@@ -13,6 +13,7 @@ type ProjectStatus = 'completed' | 'current' | 'locked';
 interface ProjectDocument {
   title: string;
   url: string;
+  highlight?: string;
 }
 
 interface ProjectData {
@@ -109,7 +110,11 @@ const PROJECTS: ProjectData[] = [
     status: 'completed',
     description: "Test di usabilità con utenti reali sul prototipo High-Fidelity finale. Analisi dei risultati e rifinitura del visual design.",
     documents: [
-      { title: "Consegna 6 - User Testing & Analisi", url: "assets/deliverables/C6-user_testing/consegna-6-user-testing-report.pdf" },
+      {
+        title: "Consegna 6 - User Testing & Analisi",
+        url: "assets/deliverables/C6-user_testing/consegna-6-user-testing-report.pdf",
+        highlight: "Link Aggiornato Sab 10 Gen (Fix)"
+      },
       { title: "Modifiche al Prototipo Post V.E.", url: "assets/deliverables/C6-user_testing/consegna-6-documento-modificheVE.pdf" },
       { title: "Protocollo per User Testing ", url: "assets/deliverables/C6-user_testing/consegna-6-protocollo-usability-testing.pdf" }
     ],
@@ -276,17 +281,28 @@ const ProjectShowcase: React.FC = () => {
                           <p className="text-[10px] uppercase tracking-widest text-zinc-500 font-bold mb-3">Documentazione</p>
                           <div className="flex flex-wrap gap-3">
                             {project.documents.map((doc, i) => (
-                              <a
-                                key={i}
-                                href={doc.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex items-center gap-2 px-4 py-2 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 hover:border-emerald-900 rounded-lg transition-all duration-300 group/doc"
-                              >
-                                <FileText className="w-4 h-4 text-emerald-600" />
-                                <span className="text-xs font-mono text-zinc-300 group-hover/doc:text-white">{doc.title}</span>
-                                <Download className="w-3 h-3 text-zinc-600 group-hover/doc:text-emerald-500 ml-2" />
-                              </a>
+                              <div key={i} className="relative">
+                                <a
+                                  href={doc.url}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className={`flex items-center gap-2 px-4 py-2 bg-zinc-900 hover:bg-zinc-800 border rounded-lg transition-all duration-300 group/doc ${doc.highlight
+                                      ? 'border-amber-500/50 hover:border-amber-400 shadow-[0_0_15px_rgba(245,158,11,0.2)]'
+                                      : 'border-zinc-800 hover:border-emerald-900'
+                                    }`}
+                                >
+                                  <FileText className={`w-4 h-4 ${doc.highlight ? 'text-amber-500' : 'text-emerald-600'}`} />
+                                  <span className={`text-xs font-mono group-hover/doc:text-white ${doc.highlight ? 'text-amber-100' : 'text-zinc-300'
+                                    }`}>{doc.title}</span>
+                                  <Download className={`w-3 h-3 ml-2 ${doc.highlight ? 'text-amber-500 group-hover/doc:text-amber-300' : 'text-zinc-600 group-hover/doc:text-emerald-500'
+                                    }`} />
+                                </a>
+                                {doc.highlight && (
+                                  <div className="absolute -top-2 -right-2 px-2 py-0.5 bg-amber-500 text-black text-[9px] font-bold uppercase tracking-wider rounded-full shadow-lg animate-pulse z-20 whitespace-nowrap">
+                                    {doc.highlight}
+                                  </div>
+                                )}
+                              </div>
                             ))}
                           </div>
                         </div>
