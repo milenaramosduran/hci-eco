@@ -113,7 +113,7 @@ const PROJECTS: ProjectData[] = [
       {
         title: "Consegna 6 - User Testing & Analisi",
         url: "assets/deliverables/C6-user_testing/consegna-6-user-testing-report.pdf",
-        highlight: "Link Aggiornato Ven 9 Gen (Fix, ricaricare pagina)"
+        highlight: "Aggiornato Ven 9 Gen (errore link, ricaricare pagina)"
       },
       { title: "Modifiche al Prototipo Post V.E.", url: "assets/deliverables/C6-user_testing/consegna-6-documento-modificheVE.pdf" },
       { title: "Protocollo per User Testing ", url: "assets/deliverables/C6-user_testing/consegna-6-protocollo-usability-testing.pdf" }
