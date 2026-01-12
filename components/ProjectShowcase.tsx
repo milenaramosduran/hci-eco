@@ -83,7 +83,8 @@ const PROJECTS: ProjectData[] = [
     category: "C4",
     deadline: "9 Dicembre",
     status: 'completed',
-    description: "Sviluppo dei flussi completi su Figma (Mid-Fi). Implementazione della navigazione 'Ride Safe' su Watch e gestione della Community su Smartphone. Il prototipo è stato evoluto nella versione High-Fidelity finale (Consegna 6).",
+    description: "Sviluppo prototipo Mid-Fi interattivo su Figma. Implementazione dei 3 Task con navigazione funzionale e link attivi. Documentazione scelte progettuali (layout, visual design, meccanismi di interazione) e manuale per valutatori esterni.",
+    feedback: "README chiaro e ben fatto. Il prototipo presenta limiti di interattività: molti elementi non cliccabili, segnaposto da sostituire con dati realistici. Task da migliorare: indicazione punto di partenza, gestione percorsi salvati poco chiara, filtri da ripensare nel nome e flusso, segnalazioni e condivisione viaggio da rivedere.",
     documents: [
       { title: "Consegna 4 - Scelte Progettuali", url: "assets/deliverables/C4-prototipiMF/consegna-4-scelte.pdf" },
       { title: "Manuale Valutatori", url: "assets/deliverables/C4-prototipiMF/consegna-4-valutatori.pdf" }
@@ -96,7 +97,7 @@ const PROJECTS: ProjectData[] = [
     category: "C5",
     deadline: "22 Dicembre",
     status: 'completed',
-    description: "Valutazione incrociata del prototipo basata sulle 10 Euristiche di Nielsen. Report delle violazioni e severity rating.",
+    description: "Valutazione euristica del prototipo GreenBytes con le 10 Euristiche di Nielsen. Report individuale con severity rating (0-4) e sintesi di gruppo con violazioni identificate e raccomandazioni.",
     documents: [
       { title: "Consegna 5 - Valutazione Euristica", url: "assets/deliverables/C5-valutazioneEU/consegna-5-valutazione-euristica.pdf" }
     ]
@@ -108,7 +109,7 @@ const PROJECTS: ProjectData[] = [
     category: "C6",
     deadline: "9 Gennaio 2026",
     status: 'completed',
-    description: "Test di usabilità con utenti reali sul prototipo High-Fidelity finale. Analisi dei risultati e rifinitura del visual design.",
+    description: "Prototipo Hi-Fi finale con correzioni post-valutazione euristica. Test di usabilità con 6 utenti target sui 3 Task. Analisi quantitativa e qualitativa con raccomandazioni di miglioramento.",
     documents: [
       {
         title: "Consegna 6 - User Testing & Analisi",
