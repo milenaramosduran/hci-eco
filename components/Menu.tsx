@@ -191,8 +191,8 @@ const Menu: React.FC = () => {
           </ul>
         </div>
 
-        {/* RIGHT COLUMN: Secondary Info */}
-        <div ref={secondaryRef} className="lg:col-span-5 flex flex-col justify-end lg:justify-center pb-12 lg:pb-0 text-white/60 space-y-12 pl-2 lg:pl-12 lg:border-l lg:border-white/5 h-full relative">
+        {/* RIGHT COLUMN: Secondary Info - Scrollable */}
+        <div ref={secondaryRef} className="lg:col-span-5 flex flex-col justify-start pb-12 lg:pb-0 text-white/60 space-y-8 pl-2 lg:pl-12 lg:border-l lg:border-white/5 h-full max-h-screen overflow-y-auto custom-scrollbar py-20 lg:py-24 relative">
 
           {/* Decorative Line (Mobile only) */}
           <div className="lg:hidden w-full h-[1px] bg-white/10 absolute top-0 left-0" />
@@ -244,35 +244,37 @@ const Menu: React.FC = () => {
             <h4 className="text-xs font-bold uppercase tracking-widest text-emerald-500 font-display">
               Prototipo Finale
             </h4>
-            <a
-              href="https://www.figma.com/proto/3VekieTqPhSLlhxNFiwglQ/Prototipi-App?page-id=0%3A1&node-id=253-647&p=f&viewport=928%2C1726%2C0.09&t=wFjPNdwsVfFWW5lp-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=253%3A644"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center justify-between w-full p-4 bg-zinc-900/50 hover:bg-emerald-900/20 border border-zinc-800 hover:border-emerald-500/50 rounded-lg transition-all duration-300"
-            >
-              <div className="flex flex-col">
-                <span className="text-lg font-bold text-white group-hover:text-emerald-400 transition-colors">Visualizza l'App High-Fidelity</span>
-                <span className="text-xs text-zinc-500 font-mono">Prototipo Figma</span>
-              </div>
-              <div className="w-10 h-10 rounded-full bg-zinc-800 group-hover:bg-emerald-500/20 flex items-center justify-center transition-colors">
-                <ArrowUpRight className="w-5 h-5 text-zinc-400 group-hover:text-emerald-400 transition-colors" />
-              </div>
-            </a>
+            <div className="flex flex-col lg:flex-row gap-2">
+              <a
+                href="https://www.figma.com/proto/3VekieTqPhSLlhxNFiwglQ/Prototipi-App?page-id=0%3A1&node-id=253-647&p=f&viewport=928%2C1726%2C0.09&t=wFjPNdwsVfFWW5lp-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=253%3A644"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center justify-between flex-1 p-3 bg-zinc-900/50 hover:bg-emerald-900/20 border border-zinc-800 hover:border-emerald-500/50 rounded-lg transition-all duration-300"
+              >
+                <div className="flex flex-col">
+                  <span className="text-sm lg:text-base font-bold text-white group-hover:text-emerald-400 transition-colors">App Mobile</span>
+                  <span className="text-xs text-zinc-500 font-mono">Hi-Fi</span>
+                </div>
+                <div className="w-8 h-8 lg:w-10 lg:h-10 rounded-full bg-zinc-800 group-hover:bg-emerald-500/20 flex items-center justify-center transition-colors">
+                  <ArrowUpRight className="w-4 h-4 lg:w-5 lg:h-5 text-zinc-400 group-hover:text-emerald-400 transition-colors" />
+                </div>
+              </a>
 
-            <a
-              href="https://www.figma.com/proto/3VekieTqPhSLlhxNFiwglQ/Prototipi-App?page-id=586%3A1268&node-id=586-1640&p=f&viewport=353%2C305%2C0.15&t=TNIqnExWlRVjfggc-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=586%3A1917"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center justify-between w-full p-4 bg-zinc-900/50 hover:bg-emerald-900/20 border border-zinc-800 hover:border-emerald-500/50 rounded-lg transition-all duration-300 mt-2"
-            >
-              <div className="flex flex-col">
-                <span className="text-lg font-bold text-white group-hover:text-emerald-400 transition-colors">Visualizza App Smartwatch</span>
-                <span className="text-xs text-zinc-500 font-mono">Prototipo Figma</span>
-              </div>
-              <div className="w-10 h-10 rounded-full bg-zinc-800 group-hover:bg-emerald-500/20 flex items-center justify-center transition-colors">
-                <ArrowUpRight className="w-5 h-5 text-zinc-400 group-hover:text-emerald-400 transition-colors" />
-              </div>
-            </a>
+              <a
+                href="https://www.figma.com/proto/3VekieTqPhSLlhxNFiwglQ/Prototipi-App?page-id=586%3A1268&node-id=586-1640&p=f&viewport=353%2C305%2C0.15&t=TNIqnExWlRVjfggc-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=586%3A1917"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center justify-between flex-1 p-3 bg-zinc-900/50 hover:bg-emerald-900/20 border border-zinc-800 hover:border-emerald-500/50 rounded-lg transition-all duration-300"
+              >
+                <div className="flex flex-col">
+                  <span className="text-sm lg:text-base font-bold text-white group-hover:text-emerald-400 transition-colors">Smartwatch</span>
+                  <span className="text-xs text-zinc-500 font-mono">Hi-Fi</span>
+                </div>
+                <div className="w-8 h-8 lg:w-10 lg:h-10 rounded-full bg-zinc-800 group-hover:bg-emerald-500/20 flex items-center justify-center transition-colors">
+                  <ArrowUpRight className="w-4 h-4 lg:w-5 lg:h-5 text-zinc-400 group-hover:text-emerald-400 transition-colors" />
+                </div>
+              </a>
+            </div>
           </div>
 
         </div>

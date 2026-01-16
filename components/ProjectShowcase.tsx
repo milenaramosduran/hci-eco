@@ -242,8 +242,8 @@ const ProjectShowcase: React.FC = () => {
 
             <div className="w-full h-full max-w-[1800px] px-6 md:px-12 grid grid-cols-1 md:grid-cols-12 md:gap-12 relative z-10 transition-all duration-700 ease-out group-hover:scale-[1.01] group-hover:shadow-[0_0_100px_rgba(16,185,129,0.1)]">
 
-              {/* Main Content - Centered */}
-              <div className="md:col-span-10 md:col-start-2 flex flex-col justify-center h-full pt-20 md:pt-0">
+              {/* Main Content - Scrollable */}
+              <div className="md:col-span-10 md:col-start-2 flex flex-col justify-start h-full overflow-y-auto custom-scrollbar py-20 md:py-24">
                 <div className="mb-6 md:mb-10 flex items-center gap-4 border-b border-zinc-900 pb-6 w-fit">
                   <span className="font-mono text-emerald-500 text-sm">CONSEGNA {project.id}</span>
                   <StatusBadge status={project.status} />

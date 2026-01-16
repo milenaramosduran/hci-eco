@@ -7,14 +7,33 @@ const CustomCursor: React.FC = () => {
   const followerRef = useRef<HTMLDivElement>(null);
   const [isHovering, setIsHovering] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const [hasFinePointer, setHasFinePointer] = useState(true);
+
+  // Detect if device has fine pointer capability (mouse/trackpad)
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(hover: hover) and (pointer: fine)');
+
+    // Set initial state
+    setHasFinePointer(mediaQuery.matches);
+
+    // Listen for changes (e.g., when user connects/disconnects trackpad)
+    const handleChange = (e: MediaQueryListEvent) => {
+      setHasFinePointer(e.matches);
+    };
+
+    mediaQuery.addEventListener('change', handleChange);
+
+    return () => {
+      mediaQuery.removeEventListener('change', handleChange);
+    };
+  }, []);
 
   useEffect(() => {
     const cursor = cursorRef.current;
     const follower = followerRef.current;
 
-    // Only run on non-touch devices
-    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-    if (isTouchDevice || !cursor || !follower) return;
+    // Only run on devices with fine pointer capability
+    if (!hasFinePointer || !cursor || !follower) return;
 
     // Center the anchor point
     gsap.set(cursor, { xPercent: -50, yPercent: -50 });
@@ -64,7 +83,7 @@ const CustomCursor: React.FC = () => {
       window.removeEventListener('cursor:hide', onCursorHide);
       window.removeEventListener('cursor:show', onCursorShow);
     };
-  }, [isHovering, isVisible]);
+  }, [isHovering, isVisible, hasFinePointer]);
 
   useEffect(() => {
     const follower = followerRef.current;
@@ -89,7 +108,8 @@ const CustomCursor: React.FC = () => {
     }
   }, [isHovering]);
 
-  if (typeof window !== 'undefined' && ('ontouchstart' in window || navigator.maxTouchPoints > 0)) {
+  // Don't render cursor if device doesn't have fine pointer capability
+  if (!hasFinePointer) {
     return null;
   }
 
