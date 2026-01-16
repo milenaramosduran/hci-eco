@@ -52,6 +52,33 @@
       }
     }
 
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      /* IE and Edge */
+      scrollbar-width: none;
+      /* Firefox */
+    }
+
+    /* CUSTOM CURSOR LOGIC: Hide default cursor only on non-touch devices */
+    @media (hover: hover) and (pointer: fine) {
+
+      body,
+      a,
+      button,
+      input,
+      textarea,
+      select,
+      [role="button"] {
+        cursor: none !important;
+      }
+    }
+
     /* CUSTOM SCROLLBAR STYLING */
     .custom-scrollbar::-webkit-scrollbar {
       width: 4px;
