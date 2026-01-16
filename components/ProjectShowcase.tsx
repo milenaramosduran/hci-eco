@@ -275,10 +275,10 @@ const ProjectShowcase: React.FC = () => {
                         </div>
                       )}
 
-                      <div className="flex flex-wrap gap-8">
+                      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mt-8">
                         {/* DOCUMENTS SECTION */}
                         {project.documents && project.documents.length > 0 && (
-                          <div className="mt-8">
+                          <div>
                             <p className="text-[10px] uppercase tracking-widest text-zinc-500 font-bold mb-3">Documentazione</p>
                             <div className="flex flex-wrap gap-3">
                               {project.documents.map((doc, i) => (
@@ -311,11 +311,11 @@ const ProjectShowcase: React.FC = () => {
 
                         {/* PROTOTYPES SECTION */}
                         {project.prototypes && project.prototypes.length > 0 && (
-                          <div className="mt-8">
+                          <div>
                             <p className="text-[10px] uppercase tracking-widest text-emerald-600 font-bold mb-3 flex items-center gap-2">
                               <Play className="w-3 h-3 fill-current" /> Prototipi Interattivi
                             </p>
-                            <div className="flex flex-wrap gap-8">
+                            <div className="flex flex-col gap-4">
                               {project.prototypes.map((proto, i) => (
                                 <div key={i} className="flex items-center gap-4">
                                   <span className="text-sm font-mono text-emerald-100 min-w-[200px]">{proto.title}</span>
