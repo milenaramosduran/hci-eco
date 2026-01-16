@@ -233,7 +233,7 @@ const ProjectShowcase: React.FC = () => {
         {PROJECTS.map((project) => (
           <div
             key={project.id}
-            className="project-panel w-screen h-screen flex-shrink-0 bg-black flex items-center justify-center relative border-r border-zinc-900 box-border overflow-hidden group"
+            className="project-panel w-[100dvw] h-[100dvh] flex-shrink-0 bg-black flex items-center justify-center relative border-r border-zinc-900 box-border overflow-hidden group"
           >
             {/* Background Number (Decorative with Parallax) */}
             <div className="project-bg-number absolute top-0 right-0 md:right-[5%] font-display text-[20rem] md:text-[30rem] leading-none text-zinc-900/30 select-none pointer-events-none opacity-20 md:opacity-30 mix-blend-screen z-0">
@@ -244,7 +244,7 @@ const ProjectShowcase: React.FC = () => {
 
               {/* Main Content - Centered */}
               <div className="md:col-span-10 md:col-start-2 h-full overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']">
-                <div className="flex flex-col justify-center min-h-full pt-24 pb-48 md:pt-0 md:pb-40">
+                <div className="flex flex-col justify-center min-h-[100dvh] pt-24 pb-64 md:pt-0 md:pb-40">
                   <div className="mb-6 md:mb-10 flex items-center gap-4 border-b border-zinc-900 pb-6 w-fit">
                     <span className="font-mono text-emerald-500 text-sm">CONSEGNA {project.id}</span>
                     <StatusBadge status={project.status} />
