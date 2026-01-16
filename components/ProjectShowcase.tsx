@@ -244,8 +244,8 @@ const ProjectShowcase: React.FC = () => {
 
               {/* Main Content - Centered */}
               <div className="md:col-span-10 md:col-start-2 h-full overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']">
-                <div className="flex flex-col justify-center min-h-[100dvh] pt-24 pb-64 md:pt-0 md:pb-40">
-                  <div className="mb-6 md:mb-10 flex items-center gap-4 border-b border-zinc-900 pb-6 w-fit">
+                <div className="flex flex-col justify-start min-h-[100dvh] pt-32 pb-64 md:pt-40 md:pb-40">
+                  <div className="mb-2 flex items-center gap-4 w-fit">
                     <span className="font-mono text-emerald-500 text-sm">CONSEGNA {project.id}</span>
                     <StatusBadge status={project.status} />
                   </div>
