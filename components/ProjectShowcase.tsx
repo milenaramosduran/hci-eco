@@ -178,6 +178,7 @@ const ProjectShowcase: React.FC = () => {
           trigger: containerRef.current,
           pin: true,
           scrub: 1, // Smooth scrubbing
+          anticipatePin: 1, // Helps with pin flashing
           snap: {
             snapTo: 1 / (totalPanels - 1),
             duration: { min: 0.2, max: 0.5 },
@@ -227,8 +228,8 @@ const ProjectShowcase: React.FC = () => {
       {/* HORIZONTAL TRACK CONTAINER */}
       <div
         ref={trackRef}
-        className="flex w-fit h-screen"
-        style={{ width: `${PROJECTS.length * 100}vw` }}
+        className="flex w-fit h-screen will-change-transform"
+        style={{ width: `${PROJECTS.length * 100}dvw` }}
       >
         {PROJECTS.map((project) => (
           <div
