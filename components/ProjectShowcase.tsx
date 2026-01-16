@@ -243,130 +243,132 @@ const ProjectShowcase: React.FC = () => {
             <div className="w-full h-full max-w-[1800px] px-6 md:px-12 grid grid-cols-1 md:grid-cols-12 md:gap-12 relative z-10 transition-all duration-700 ease-out group-hover:scale-[1.01] group-hover:shadow-[0_0_100px_rgba(16,185,129,0.1)]">
 
               {/* Main Content - Centered */}
-              <div className="md:col-span-10 md:col-start-2 flex flex-col justify-center h-full pt-20 md:pt-0">
-                <div className="mb-6 md:mb-10 flex items-center gap-4 border-b border-zinc-900 pb-6 w-fit">
-                  <span className="font-mono text-emerald-500 text-sm">CONSEGNA {project.id}</span>
-                  <StatusBadge status={project.status} />
-                </div>
-
-                {/* Title - Bigger and bolder */}
-                <h2 className="font-display text-[10vw] md:text-[7vw] leading-[0.8] tracking-tighter text-white uppercase mb-8 whitespace-pre-line">
-                  {project.title}
-                </h2>
-
-                {/* Info Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-12 border-t border-zinc-800 pt-8">
-                  <div className="md:col-span-2 space-y-6">
-                    <p className="text-zinc-400 text-base md:text-lg leading-relaxed font-light max-w-2xl">
-                      {project.description}
-                    </p>
-
-                    {/* FEEDBACK SECTION */}
-                    {project.feedback && (
-                      <div className="mt-8">
-                        <div className="flex items-start gap-4">
-                          <MessageSquareQuote className="w-5 h-5 text-emerald-600 shrink-0 mt-1 opacity-80" />
-                          <div>
-                            <p className="text-[10px] uppercase tracking-widest text-emerald-600 font-bold mb-2 opacity-80">Feedback Docenti</p>
-                            <p className="text-zinc-500 text-sm italic leading-relaxed">"{project.feedback}"</p>
-                          </div>
-                        </div>
-                      </div>
-                    )}
-
-                    <div className="flex flex-wrap gap-8">
-                      {/* DOCUMENTS SECTION */}
-                      {project.documents && project.documents.length > 0 && (
-                        <div className="mt-8">
-                          <p className="text-[10px] uppercase tracking-widest text-zinc-500 font-bold mb-3">Documentazione</p>
-                          <div className="flex flex-wrap gap-3">
-                            {project.documents.map((doc, i) => (
-                              <div key={i} className="relative">
-                                <a
-                                  href={doc.url}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className={`flex items-center gap-2 px-4 py-2 bg-zinc-900 hover:bg-zinc-800 border rounded-lg transition-all duration-300 group/doc ${doc.highlight
-                                    ? 'border-amber-500/50 hover:border-amber-400 shadow-[0_0_15px_rgba(245,158,11,0.2)]'
-                                    : 'border-zinc-800 hover:border-emerald-900'
-                                    }`}
-                                >
-                                  <FileText className={`w-4 h-4 ${doc.highlight ? 'text-amber-500' : 'text-emerald-600'}`} />
-                                  <span className={`text-xs font-mono group-hover/doc:text-white ${doc.highlight ? 'text-amber-100' : 'text-zinc-300'
-                                    }`}>{doc.title}</span>
-                                  <Download className={`w-3 h-3 ml-2 ${doc.highlight ? 'text-amber-500 group-hover/doc:text-amber-300' : 'text-zinc-600 group-hover/doc:text-emerald-500'
-                                    }`} />
-                                </a>
-                                {doc.highlight && (
-                                  <div className="absolute -top-2 -right-2 px-2 py-0.5 bg-amber-500 text-black text-[9px] font-bold uppercase tracking-wider rounded-full shadow-lg animate-pulse z-20 whitespace-nowrap">
-                                    {doc.highlight}
-                                  </div>
-                                )}
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-                      )}
-
-                      {/* PROTOTYPES SECTION */}
-                      {project.prototypes && project.prototypes.length > 0 && (
-                        <div className="mt-8">
-                          <p className="text-[10px] uppercase tracking-widest text-emerald-600 font-bold mb-3 flex items-center gap-2">
-                            <Play className="w-3 h-3 fill-current" /> Prototipi Interattivi
-                          </p>
-                          <div className="flex flex-wrap gap-8">
-                            {project.prototypes.map((proto, i) => (
-                              <div key={i} className="flex items-center gap-4">
-                                <span className="text-sm font-mono text-emerald-100 min-w-[200px]">{proto.title}</span>
-
-                                {/* Dual Action Buttons Control Group */}
-                                <div className="flex items-center gap-3">
-                                  {/* Action 1: Preview Modal */}
-                                  <button
-                                    onClick={() => setActivePrototype({ url: proto.url, title: proto.title })}
-                                    className="group p-2 rounded-full border border-emerald-900 hover:border-emerald-500 hover:bg-emerald-500/20 transition-all duration-300"
-                                    title="Anteprima Interattiva"
-                                  >
-                                    <Maximize2 className="w-4 h-4 text-emerald-500 group-hover:text-white transition-colors" />
-                                  </button>
-
-                                  {/* Action 2: Open External */}
-                                  <a
-                                    href={proto.url}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="group p-2 rounded-full border border-zinc-800 hover:border-emerald-900 hover:bg-zinc-800 transition-all duration-300"
-                                    title="Apri su Figma"
-                                  >
-                                    <ArrowUpRight className="w-4 h-4 text-zinc-500 group-hover:text-emerald-400 transition-colors" />
-                                  </a>
-                                </div>
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-                      )}
-                    </div>
+              <div className="md:col-span-10 md:col-start-2 h-full overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']">
+                <div className="flex flex-col justify-center min-h-full pt-24 pb-48 md:pt-0 md:pb-40">
+                  <div className="mb-6 md:mb-10 flex items-center gap-4 border-b border-zinc-900 pb-6 w-fit">
+                    <span className="font-mono text-emerald-500 text-sm">CONSEGNA {project.id}</span>
+                    <StatusBadge status={project.status} />
                   </div>
 
-                  <div className="space-y-8">
-                    <div className="flex flex-col">
-                      <div className="flex items-center gap-2 text-[10px] uppercase tracking-widest text-zinc-600 font-bold mb-2">
-                        <Target className="w-4 h-4" /> Focus
+                  {/* Title - Bigger and bolder */}
+                  <h2 className="font-display text-[10vw] md:text-[7vw] leading-[0.8] tracking-tighter text-white uppercase mb-8 whitespace-pre-line">
+                    {project.title}
+                  </h2>
+
+                  {/* Info Grid */}
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-12 border-t border-zinc-800 pt-8">
+                    <div className="md:col-span-2 space-y-6">
+                      <p className="text-zinc-400 text-base md:text-lg leading-relaxed font-light max-w-2xl">
+                        {project.description}
+                      </p>
+
+                      {/* FEEDBACK SECTION */}
+                      {project.feedback && (
+                        <div className="mt-8">
+                          <div className="flex items-start gap-4">
+                            <MessageSquareQuote className="w-5 h-5 text-emerald-600 shrink-0 mt-1 opacity-80" />
+                            <div>
+                              <p className="text-[10px] uppercase tracking-widest text-emerald-600 font-bold mb-2 opacity-80">Feedback Docenti</p>
+                              <p className="text-zinc-500 text-sm italic leading-relaxed">"{project.feedback}"</p>
+                            </div>
+                          </div>
+                        </div>
+                      )}
+
+                      <div className="flex flex-wrap gap-8">
+                        {/* DOCUMENTS SECTION */}
+                        {project.documents && project.documents.length > 0 && (
+                          <div className="mt-8">
+                            <p className="text-[10px] uppercase tracking-widest text-zinc-500 font-bold mb-3">Documentazione</p>
+                            <div className="flex flex-wrap gap-3">
+                              {project.documents.map((doc, i) => (
+                                <div key={i} className="relative">
+                                  <a
+                                    href={doc.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className={`flex items-center gap-2 px-4 py-2 bg-zinc-900 hover:bg-zinc-800 border rounded-lg transition-all duration-300 group/doc ${doc.highlight
+                                      ? 'border-amber-500/50 hover:border-amber-400 shadow-[0_0_15px_rgba(245,158,11,0.2)]'
+                                      : 'border-zinc-800 hover:border-emerald-900'
+                                      }`}
+                                  >
+                                    <FileText className={`w-4 h-4 ${doc.highlight ? 'text-amber-500' : 'text-emerald-600'}`} />
+                                    <span className={`text-xs font-mono group-hover/doc:text-white ${doc.highlight ? 'text-amber-100' : 'text-zinc-300'
+                                      }`}>{doc.title}</span>
+                                    <Download className={`w-3 h-3 ml-2 ${doc.highlight ? 'text-amber-500 group-hover/doc:text-amber-300' : 'text-zinc-600 group-hover/doc:text-emerald-500'
+                                      }`} />
+                                  </a>
+                                  {doc.highlight && (
+                                    <div className="absolute -top-2 -right-2 px-2 py-0.5 bg-amber-500 text-black text-[9px] font-bold uppercase tracking-wider rounded-full shadow-lg animate-pulse z-20 whitespace-nowrap">
+                                      {doc.highlight}
+                                    </div>
+                                  )}
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+
+                        {/* PROTOTYPES SECTION */}
+                        {project.prototypes && project.prototypes.length > 0 && (
+                          <div className="mt-8">
+                            <p className="text-[10px] uppercase tracking-widest text-emerald-600 font-bold mb-3 flex items-center gap-2">
+                              <Play className="w-3 h-3 fill-current" /> Prototipi Interattivi
+                            </p>
+                            <div className="flex flex-wrap gap-8">
+                              {project.prototypes.map((proto, i) => (
+                                <div key={i} className="flex items-center gap-4">
+                                  <span className="text-sm font-mono text-emerald-100 min-w-[200px]">{proto.title}</span>
+
+                                  {/* Dual Action Buttons Control Group */}
+                                  <div className="flex items-center gap-3">
+                                    {/* Action 1: Preview Modal */}
+                                    <button
+                                      onClick={() => setActivePrototype({ url: proto.url, title: proto.title })}
+                                      className="group p-2 rounded-full border border-emerald-900 hover:border-emerald-500 hover:bg-emerald-500/20 transition-all duration-300"
+                                      title="Anteprima Interattiva"
+                                    >
+                                      <Maximize2 className="w-4 h-4 text-emerald-500 group-hover:text-white transition-colors" />
+                                    </button>
+
+                                    {/* Action 2: Open External */}
+                                    <a
+                                      href={proto.url}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="group p-2 rounded-full border border-zinc-800 hover:border-emerald-900 hover:bg-zinc-800 transition-all duration-300"
+                                      title="Apri su Figma"
+                                    >
+                                      <ArrowUpRight className="w-4 h-4 text-zinc-500 group-hover:text-emerald-400 transition-colors" />
+                                    </a>
+                                  </div>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        )}
                       </div>
-                      <span className="text-white font-display text-2xl">{project.subtitle}</span>
                     </div>
 
-                    <div className="flex flex-col gap-6">
+                    <div className="space-y-8">
                       <div className="flex flex-col">
-                        <span className="text-[10px] uppercase tracking-widest text-zinc-600 font-bold mb-1">Fase</span>
-                        <span className="text-zinc-400 font-mono text-base">{project.category}</span>
-                      </div>
-                      <div className="flex flex-col">
-                        <div className="flex items-center gap-2 text-[10px] uppercase tracking-widest text-zinc-600 font-bold mb-1">
-                          <Calendar className="w-4 h-4" /> Deadline
+                        <div className="flex items-center gap-2 text-[10px] uppercase tracking-widest text-zinc-600 font-bold mb-2">
+                          <Target className="w-4 h-4" /> Focus
                         </div>
-                        <span className="text-zinc-400 font-mono text-base">{project.deadline}</span>
+                        <span className="text-white font-display text-2xl">{project.subtitle}</span>
+                      </div>
+
+                      <div className="flex flex-col gap-6">
+                        <div className="flex flex-col">
+                          <span className="text-[10px] uppercase tracking-widest text-zinc-600 font-bold mb-1">Fase</span>
+                          <span className="text-zinc-400 font-mono text-base">{project.category}</span>
+                        </div>
+                        <div className="flex flex-col">
+                          <div className="flex items-center gap-2 text-[10px] uppercase tracking-widest text-zinc-600 font-bold mb-1">
+                            <Calendar className="w-4 h-4" /> Deadline
+                          </div>
+                          <span className="text-zinc-400 font-mono text-base">{project.deadline}</span>
+                        </div>
                       </div>
                     </div>
                   </div>
