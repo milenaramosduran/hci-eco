@@ -155,7 +155,7 @@ const Menu: React.FC = () => {
       {/* Background Layer - Solid Zinc-950 */}
       <div
         ref={bgRef}
-        className="absolute inset-0 bg-zinc-950 overflow-hidden"
+        className="absolute inset-0 bg-zinc-950 overflow-hidden will-change-transform"
       >
         {/* Atmospheric Gradients with interactive class */}
         <div className="menu-blob absolute top-[-20%] right-[-10%] w-[60vw] h-[60vw] bg-emerald-900/20 blur-[120px] rounded-full pointer-events-none mix-blend-screen opacity-60" />
@@ -165,7 +165,7 @@ const Menu: React.FC = () => {
       {/* Content Layer Wrapper */}
       <div
         ref={contentRef}
-        className="relative w-full h-full max-w-[1920px] mx-auto px-6 md:px-16 grid grid-cols-1 lg:grid-cols-12 text-white"
+        className="relative w-full h-full max-w-[1920px] mx-auto px-6 md:px-16 grid grid-cols-1 lg:grid-cols-12 text-white will-change-transform"
       >
 
         {/* LEFT COLUMN: Main Navigation */}

@@ -55,7 +55,7 @@ const Personas: React.FC = () => {
         {personas.map((p, i) => (
           <div key={i} className="group relative overflow-hidden bg-white h-[450px] md:h-[550px] border border-gray-200 hover:shadow-xl transition-all duration-500">
             <div className="h-2/3 overflow-hidden relative">
-              <img src={p.image} alt={p.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <img src={p.image} alt={p.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 will-change-transform" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
               <div className="absolute bottom-4 left-4 text-white">
                 <h3 className="font-display text-3xl font-medium">{p.name}</h3>
