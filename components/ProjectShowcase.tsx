@@ -83,8 +83,8 @@ const PROJECTS: ProjectData[] = [
     category: "C4",
     deadline: "9 Dicembre",
     status: 'completed',
-    description: "Sviluppo prototipo Mid-Fi interattivo su Figma. Implementazione dei 3 Task con navigazione funzionale e link attivi. Documentazione scelte progettuali (layout, visual design, meccanismi di interazione) e manuale per valutatori esterni.",
-    feedback: "README chiaro e ben fatto. Il prototipo presenta limiti di interattività: molti elementi non cliccabili, segnaposto da sostituire con dati realistici. Task da migliorare: indicazione punto di partenza, gestione percorsi salvati poco chiara, filtri da ripensare nel nome e flusso, segnalazioni e condivisione viaggio da rivedere.",
+    description: "Sviluppo prototipo Mid-Fi su Figma con i 3 Task interattivi. Documentazione delle scelte di visual design e interazione, con manuale per valutatori.",
+    feedback: "README chiaro. Prototipo con interattività limitata e dati mancanti. Da rivedere: punto di partenza, percorsi salvati e gestione dei filtri.",
     documents: [
       { title: "Consegna 4 - Scelte Progettuali", url: "assets/deliverables/C4-prototipiMF/consegna-4-scelte.pdf" },
       { title: "Manuale Valutatori", url: "assets/deliverables/C4-prototipiMF/consegna-4-valutatori.pdf" }
